@@ -8,7 +8,8 @@
     <title>TWILIGHT GAMES</title>
     <script src="layout-java.js" defer></script>
     <link rel="stylesheet" href="layout-telaproduto.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     
 
     
@@ -22,13 +23,16 @@
   <nav class="navbar">
   <div class="navdiv">
     <div class="nav-logo"><a href="telainicial.html"><img class="logo" src="img/logocompleto.png"></a></div>
-      <ul>
+        <ul class="nav-ul">
           <li><a href="telainicial.html">Loja</a></li>
           <li><a href=>Suporte</a></li>
-          <li><a href="carrinho.html">Meu Carrinho</a></li>
-          <button class="navbut"><a href="login.html">Login</a></button>
-          <button class="navbut"><a href="cadastrar.html">Cadastrar</a></button>
-      </ul>
+          <li><a href="carrinho.html">Meu Carrinho</a></li>    
+        </ul>
+        <div class="cart-div">
+            <a href="carrinho.html"><i class="material-symbols-outlined cart-icon" style="font-size: 32px;">shopping_cart</i></a>
+        </div>
+        <button class="navbut"><a href="login.html">Login</a></button>
+        <button class="navbut"><a href="cadastrar.html">Cadastrar</a></button>
 
       </div>
   </div>
@@ -93,7 +97,8 @@
       </div>
 
       <div class="sinopse-card">
-        <p class="trailer"><video  width="600" controls>
+        <h2 class="sinopse-h">Trailer</h2>
+        <p class="trailer"><video  width="500" height="300px" controls>
           <source src="https://video.fastly.steamstatic.com/store_trailers/256927226/movie480_vp9.webm?t=1674829926" type="video/mp4">
         </video>
       </p>
@@ -140,13 +145,13 @@
 <footer>
 
   <nav class="navfooter">
-    <div class="navfot">  
+    <div class="navfot"> 
+      <p class="foot-text">© 2024 Twilight Games.</p>
     </div>
-  </nav>
+  </div>
 
 
 </footer>
-
 
 
 </html>

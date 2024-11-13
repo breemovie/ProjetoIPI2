@@ -6,6 +6,7 @@ html {
 *{
   text-decoration: none;
   
+  
    
     }
 
@@ -21,6 +22,13 @@ html {
 
 
 /* header */
+
+header {
+  width: 100%;
+  position: absolute;
+  top:0;
+}
+
 .navdiv {
   height: 40px;
   background-image: linear-gradient(#13161a 90%, #251a5e);
@@ -82,7 +90,7 @@ button a{
 .login-box {
   
   margin:  0 auto;
-  margin-top: 120px;
+  margin-top: 150px;
   width: 400px;
   height: 600px;
   border-radius: 5px;
@@ -136,7 +144,7 @@ h1{
 }
 
 
-.entrar-button{
+.entrarButton{
   background-color: #4dbd82;
   border-radius: 10px;
   border-color: #4dbd82;
@@ -224,29 +232,37 @@ h2 {
 
 
 
-
 /* footer */
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom:0;
+}
 
 
 .navfooter {
-  position: fixed;
-  background-color: #13161a;
+  position: sticky;
+  background-color: #1d1f22;
   align-items: center;
   justify-content: center;
   display: flex;
-  height: 20px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  margin-bottom: 0px;
+  height: 60px;
+
   
 }
 
 .foot-text {
   color: white;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 600;
+  
+ 
 }
 
+.navfot {
+  width: 600px;
+  height: 40px;
+  text-align: center;
+}
 /* end footer */
-
