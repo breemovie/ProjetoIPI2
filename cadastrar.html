@@ -5,80 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TWILIGHT GAMES - CADASTRAR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <link rel="stylesheet" href="layout-cadastrar.css">
 </head>
 
-
-
-<!-- header -->
 <header>
     <nav class="navbar">
-    <div class="navdiv">
-        <div class="nav-logo"><a href="telainicial.html"><img class="logo" src="img/logocompleto.png"></a></div>
-        <ul>
-            <li><a href=>Suporte</a></li>
-            <button class="navbut"><a href="login.html">Login</a></button>
-        </ul>
-        
-        </div>
-    </div>
-
-
-
+        <div class="navdiv">
+            <div class="nav-logo"><a href="telainicial.html"><img class="logo" src="img/logocompleto.png"></a></div>
+            <ul>
+                <li onClick="document.getElementById('contact').scrollIntoView();">Suporte</li>
+                <button class="navbut"><a href="login.html">Login</a></button>
+            </ul>       
+            </div>
+        </nav>
 </header>
-
-
-
 
 <body>
 
-
     <div class="login-box">
-        
-            <img src="img/FlyLogo.png" class="logo-box" alt="Logo">
-            
-
-
+        <img src="img/FlyLogo.png" class="logo-box" alt="Logo">
             <form action="login.html">
-
                 <h1>Cadastrar</h1>
-
                 <input type="text" id="username" name="user" class="input-layout" placeholder="Usuário" required><br>
                 <input type="email" id="email" name="email" class="input-layout" placeholder="E-mail" required><br>
                 <input type="password" id="senha" name="senha" class="input-layout" placeholder="Senha" required><br>
-
                 <button class="cadastrar-button" type="submit">Cadastrar</button>
-                
-                
-                               
             </form>
-
-            
-            
-          
-        
-            
     </div>
 
 
 </body>
 
-
-
-
-<!-- footer -->
-
 <footer>
-
     <nav class="navfooter">
-      <div class="navfot">  
-        <p class="foot-text">© 2024 Twilight Games.</p>
-      </div>
-    </div>
-  
-  
+        <div class="navfot" id="contact">  
+          <a href="" class="fa fa-facebook fot-icon"></a>
+          <a href="" class="fa fa-whatsapp fot-icon"></a>
+          <a href="" class="fa fa-twitter fot-icon"></a>
+          <a href="" class="fa fa-instagram fot-icon"></a>
+        </div>  
   </footer>
   
-  
-  <!-- end footer -->
 </html>

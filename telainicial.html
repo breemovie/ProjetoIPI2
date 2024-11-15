@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TWILIGHT GAMES</title>
-    <link rel="stylesheet" href="layout-telainicio.css">
     <script src="layout-java.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="stylesheet" href="layout-telainicio.css">
 </head>
 
     
@@ -20,11 +21,11 @@
             <div class="nav-right">
               <ul>
                 <li><a href="telainicial.html">Loja</a></li>
-                <li><a href=>Suporte</a></li>
+                <li onClick="document.getElementById('contact').scrollIntoView();">Suporte</li>
                 <li><a href="carrinho.html">Meu Carrinho</a></li>
               </ul>
               <div class="cart-div">
-                <a href="carrinho.html"><i class="material-symbols-outlined cart-icon" style="font-size: 32px;">shopping_cart</i></a>
+                <a href="carrinho.html"><i class="material-symbols-outlined cart-icon">shopping_cart</i></a>
               </div>
               <div class="nav-head-but">
                 <button class="navbut"><a href="login.html">Login</a></button>
@@ -40,7 +41,25 @@
    
 <!-- backimg -->
 
-<div class="div-backimg"><img src="img/back1.jpg"  class="back-img"></div>
+<div class="backimg">
+  <section aria-label="poster-imgs">
+    <div class="carousel" data-carousel>
+      <button class="carousel-button prev" data-carousel-button="prev"></button>
+      <button class="carousel-button next" data-carousel-button="next"></button>
+      <ul data-slides>
+        <li class="slide" data-active>
+          <img src="img/rdr2backimg.png" alt="Slide 1">
+        </li>
+        <li class="slide">
+          <img src="img/tw3backimg.png" alt="Slide 2">
+        </li>
+        <li class="slide" alt="Slide 3">
+          <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/292030/ss_eda99e7f705a113d04ab2a7a36068f3e7b343d17.600x338.jpg?t=1729246272" alt="">
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
 
 <!-- end backimg -->
 
@@ -86,8 +105,8 @@
         <div class="card-price-before"><p class="price-before"></p></div>
         <div class="card-price">
           <p class="price">R$ 129,99</p>
-          <i class="material-symbols-outlined fav-icon outlined"  style="font-size: 20px;">favorite</i>
-          <i class="material-icons add-icon" style="font-size: 30px;">add_shopping_cart</i>
+          <i class="material-symbols-outlined fav-icon outlined">favorite</i>
+          <i class="material-icons add-icon">add_shopping_cart</i>
         </div>
     </div>
 
@@ -97,8 +116,8 @@
         <div class="card-price-before"><p class="price-before">R$ 349,90</p></div>
         <div class="card-price">
           <p class="price">R$ 249,90</p>
-          <i class="material-symbols-outlined fav-icon outlined"  style="font-size: 20px;">favorite</i>
-          <i class="material-icons add-icon" style="font-size: 30px;">add_shopping_cart</i>
+          <i class="material-symbols-outlined fav-icon outlined">favorite</i>
+          <i class="material-icons add-icon">add_shopping_cart</i>
         </div>
     </div>
     
@@ -108,8 +127,8 @@
         <div class="card-price-before"><p class="price-before"></p></div>
         <div class="card-price">
           <p class="price">R$ 119,99</p>
-          <i class="material-symbols-outlined fav-icon outlined" style="font-size: 20px;">favorite</i>
-          <i class="material-icons add-icon" style="font-size: 30px;">add_shopping_cart</i>
+          <i class="material-symbols-outlined fav-icon outlined">favorite</i>
+          <i class="material-icons add-icon">add_shopping_cart</i>
         </div>
     </div>
 
@@ -119,8 +138,8 @@
         <div class="card-price-before"><p class="price-before"></p></div>
         <div class="card-price">
           <p class="price">R$ 39,90</p>
-          <i class="material-symbols-outlined fav-icon outlined" style="font-size: 20px;">favorite</i>
-          <i class="material-icons add-icon" style="font-size: 30px;">add_shopping_cart</i>
+          <i class="material-symbols-outlined fav-icon outlined">favorite</i>
+          <i class="material-icons add-icon">add_shopping_cart</i>
         </div>
     </div>
 
@@ -130,8 +149,8 @@
       <div class="card-price-before"><p class="price-before">R$ 159,90</p></div>
       <div class="card-price">
         <p class="price">R$ 79,90</p>
-        <i class="material-symbols-outlined fav-icon outlined" style="font-size: 20px;">favorite</i>
-        <i class="material-icons add-icon" style="font-size: 30px;">add_shopping_cart</i>
+        <i class="material-symbols-outlined fav-icon outlined">favorite</i>
+        <i class="material-icons add-icon">add_shopping_cart</i>
       </div>
     </div>
 
@@ -141,8 +160,8 @@
       <div class="card-price-before"><p class="price-before"></p></div>
       <div class="card-price">
         <p class="price">R$ 89,90</p>
-        <i class="material-symbols-outlined fav-icon outlined"  style="font-size: 20px;">favorite</i>
-        <i class="material-icons add-icon" style="font-size: 30px;">add_shopping_cart</i>
+        <i class="material-symbols-outlined fav-icon outlined">favorite</i>
+        <i class="material-icons add-icon">add_shopping_cart</i>
       </div>
     </div>
   
@@ -152,8 +171,8 @@
         <div class="card-price-before"><p class="price-before"></p></div>
         <div class="card-price">
           <p class="price">R$ 299,90</p>
-          <i class="material-symbols-outlined fav-icon outlined" style="font-size: 20px;">favorite</i>
-          <i class="material-icons add-icon" style="font-size: 30px;">add_shopping_cart</i>
+          <i class="material-symbols-outlined fav-icon outlined">favorite</i>
+          <i class="material-icons add-icon">add_shopping_cart</i>
         </div>
     </div>
 
@@ -163,8 +182,8 @@
         <div class="card-price-before"><p class="price-before"></p></div>
         <div class="card-price">
           <p class="price">R$ 49,50</p>
-          <i class="material-symbols-outlined fav-icon outlined"  style="font-size: 20px;">favorite</i>
-          <i class="material-icons add-icon" style="font-size: 30px;">add_shopping_cart</i>
+          <i class="material-symbols-outlined fav-icon outlined">favorite</i>
+          <i class="material-icons add-icon">add_shopping_cart</i>
         </div>
     </div>
 
@@ -174,8 +193,8 @@
         <div class="card-price-before"><p class="price-before">R$ 79,90</p></div>
         <div class="card-price">
           <p class="price">R$ 29,90</p>
-          <i class="material-symbols-outlined fav-icon outlined"  style="font-size: 20px;">favorite</i>
-          <i class="material-icons add-icon" style="font-size: 30px;">add_shopping_cart</i>
+          <i class="material-symbols-outlined fav-icon outlined">favorite</i>
+          <i class="material-icons add-icon">add_shopping_cart</i>
         </div>
     </div>
 
@@ -185,8 +204,8 @@
         <div class="card-price-before"><p class="price-before"></p></div>
         <div class="card-price">
           <p class="price">R$ 19,90</p>
-          <i class="material-symbols-outlined fav-icon outlined"  style="font-size: 20px;">favorite</i>
-          <i class="material-icons add-icon" style="font-size: 30px;">add_shopping_cart</i>
+          <i class="material-symbols-outlined fav-icon outlined">favorite</i>
+          <i class="material-icons add-icon">add_shopping_cart</i>
         </div>
     </div>
 
@@ -196,8 +215,8 @@
         <div class="card-price-before"><p class="price-before"></p></div>
         <div class="card-price">
           <p class="price">R$ 59,90</p>
-          <i class="material-symbols-outlined fav-icon outlined"  style="font-size: 20px;">favorite</i>
-          <i class="material-icons add-icon" style="font-size: 30px;">add_shopping_cart</i>
+          <i class="material-symbols-outlined fav-icon outlined">favorite</i>
+          <i class="material-icons add-icon">add_shopping_cart</i>
         </div>
     </div>
 
@@ -207,8 +226,8 @@
         <div class="card-price-before"><p class="price-before"></p></div>
         <div class="card-price">
           <p class="price">R$ 249,90</p>
-          <i class="material-symbols-outlined fav-icon outlined"  style="font-size: 20px;">favorite</i>
-          <i class="material-icons add-icon" style="font-size: 30px;">add_shopping_cart</i>
+          <i class="material-symbols-outlined fav-icon outlined">favorite</i>
+          <i class="material-icons add-icon">add_shopping_cart</i>
         </div>
     </div>
 
@@ -219,9 +238,8 @@
       </div>
 
 </div>
-
-
 <!-- end products -->
+
 
 
 
@@ -235,8 +253,11 @@
 <footer>
 
   <nav class="navfooter">
-    <div class="navfot">  
-      <p class="foot-text">© 2024 Twilight Games.</p>
+    <div class="navfot" id="contact">  
+      <a href="" class="fa fa-facebook fot-icon"></a>
+      <a href="" class="fa fa-whatsapp fot-icon"></a>
+      <a href="" class="fa fa-twitter fot-icon"></a>
+      <a href="" class="fa fa-instagram fot-icon"></a>
     </div>
   </div>
 

@@ -1,14 +1,24 @@
 
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
 * {
   text-decoration: none;
 }
 
 body {
     margin: 0;
+    padding: 0;
     background-image: linear-gradient(180deg, #251a5e 25%, #13161a 75%);
-    overflow-y: scroll;
-    overflow-x: hidden;   
-    
+    overflow-y: auto;
+    overflow-x: hidden;  
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;    
 }
 
 /* scrollbar */
@@ -35,7 +45,7 @@ body {
 /* header */
 header {
   width: 100%;
-  position: absolute;
+  position: relative;
   top:0;
 }
 
@@ -57,20 +67,19 @@ header {
   width: 150px;
 }
 
-.ul-nav {
-  align-items: center;
-}
-
-li {
+.nav-right li {
   list-style: none;
   display: inline-block;
-}
-
-li a{
   color: white;
   font-size: 18px;
   font-weight: 600;
-  padding-left: 20px;  
+  padding-left: 20px; 
+  cursor: pointer;
+  
+}
+
+.nav-right li a {
+  color: white;
 }
 
 .nav-head-but {
@@ -101,12 +110,14 @@ align-items: center;
   height: 30px;
 }
 .cart-icon {
+  font-size: 32px;
   color: #d9dbd9;
   cursor: pointer;
 }
 
 /* header usercad */
 .user-icon {
+  font-size: 55px;
   color: #d9dbd9;
   cursor: pointer;
 }
@@ -146,27 +157,92 @@ align-items: center;
 
 
 /* img-backgorund */
-.back-img {
-  margin-top: 72px;
+.backimg {
   width: 100%;
-  height: 375px;
+  height: 350px;
   border-bottom: 1px solid #3f4246; 
   border-top: 1px solid #3f4246; 
+  background-color: #1d1f22;
 }
+
+.carousel {
+  margin: auto;
+  width: 1100px;
+  height: 350px;
+  position: relative; 
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 300ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, .5);
+  cursor: pointer;
+  background: transparent;
+}
+
+
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background: transparent;
+}
+
+
+.carousel-button.prev {
+  left: -8px;
+}
+
+.carousel-button.next {
+  right: 0px;
+}
+
 /* end img-backgorund */
 
 /* search bar */
 .search-bar{
-  position: static;
   display: flex;
   background-color: #505356; 
   border: 3px solid #2b2d31;
   border-radius: 5px;
-  width: 1090px;
+  width: 1080px;
   height: 40px;
   justify-content: space-between;
   align-items: center;
-  margin-left: 409px;
+  margin: auto;
   margin-top: 20px; 
 }
 
@@ -197,13 +273,17 @@ align-items: center;
 /* end filter categories */
 
 .s-bar {
-  background-color: rgb(230, 230, 239, 0.6);
+  background-color: rgb(230, 230, 239, 0.5);
   border-radius: 5px;
   border: 2px solid #1d1f22;
   width: 340px;
   height: 28px;
   position: relative;   
   padding-left: 10px;
+}
+
+.s-bar:hover{
+  background-color: rgb(230, 230, 239, 0.6);
 }
 
 ::placeholder {
@@ -239,13 +319,14 @@ align-items: center;
   height: 730px;
   margin: 0 auto;
   margin-top: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   border-radius: 10px;
   overflow-y: scroll;
-  overflow-x: hidden;  
+  overflow-x: hidden; 
 }
 
 .coluna-produto {
+  align-self: center;
   background-color: #2b2d31;
   border: 2px solid #505356;
   border-radius: 5px;
@@ -297,6 +378,7 @@ align-items: center;
 
 
 .fav-icon {
+  font-size: 20px;
   margin-top: 13px;
   margin-left: 160px;
   cursor: pointer; 
@@ -312,16 +394,8 @@ align-items: center;
   color: #d9dbd9;
 }
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-
-
 .add-icon {
+  font-size: 30px;
   margin-top: 9px;
   color: #d9dbd9;
   cursor: pointer; 
@@ -344,23 +418,32 @@ align-items: center;
 /* end layout end row */
 
 /* footer */
+footer {
+  margin-top: auto;
+  position: relative;
+  width: 100%;
+  bottom:0;
+}
+
 .navfooter {
   background-color: #1d1f22;
   justify-content: center;
   display: flex;
-  height: 100px;
-}
-
-.foot-text {
-  color: white;
-  font-size: 12px;
-  font-weight: 600;
-  padding-top: 15px;
+  height: 60px;
 }
 
 .navfot {
   width: 600px;
-  height: 70px;
+  height: 60px;
+  align-self: center;
   text-align: center;
+  align-content: center;
+}
+
+.fot-icon {
+  color: #d9dbd9;
+  padding: 5px;
+  font-size: 20px;
+
 }
 /* end footer */

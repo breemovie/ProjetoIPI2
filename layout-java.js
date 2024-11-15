@@ -16,11 +16,17 @@ buttons.forEach(button => {
     slides.children[newIndex].dataset.active = true
     delete activeSlide.dataset.active
   })
+
+  const carousel = document.querySelector("[data-carousel]"); 
+const intervalTime = 3500; 
+
+setInterval(() => {
+  const nextButton = carousel.querySelector("[data-carousel-button='next']");
+  nextButton.click(); 
+}, intervalTime);
 })
 
 //
-
-
 // form pass
 
 function openForm() {
@@ -38,13 +44,11 @@ const favIcons = document.querySelectorAll('.fav-icon');
     favIcons.forEach(function(favIcon) {
       favIcon.addEventListener('click', function() {
         if (favIcon.classList.contains('material-symbols-outlined')) {
-          // Change from outlined to filled
           favIcon.classList.remove('material-symbols-outlined');
           favIcon.classList.add('material-icons');
           favIcon.classList.remove('outlined');
           favIcon.classList.add('filled');
         } else {
-          // Change from filled to outlined
           favIcon.classList.remove('material-icons');
           favIcon.classList.add('material-symbols-outlined');
           favIcon.classList.remove('filled');
@@ -55,8 +59,6 @@ const favIcons = document.querySelectorAll('.fav-icon');
 //
 
 // search filter
-
-
 function myFunction() {
   const input = document.getElementById('search');
   const filter = input.value.toLowerCase().trim();

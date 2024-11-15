@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TWILIGHT GAMES</title>
     <script src="layout-java.js" defer></script>
-    <link rel="stylesheet" href="layout-telaproduto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="stylesheet" href="layout-telaproduto.css">
     
     
 
@@ -25,14 +26,14 @@
         <div class="nav-logo"><a href="telainicial.html"><img class="logo" src="img/logocompleto.png"></a></div>
             <ul class="nav-ul">
                 <li><a href="telainicial.html">Loja</a></li>
-                <li><a href=>Suporte</a></li>
+                <li onClick="document.getElementById('contact').scrollIntoView();">Suporte</li>
                 <li><a href="carrinho.html">Meu Carrinho</a></li>
             </ul>
             <div class="cart-div">
-              <a href="carrinho.html"><i class="material-symbols-outlined cart-icon" style="font-size: 32px;">shopping_cart</i></a>
+              <a href="carrinho.html"><i class="material-symbols-outlined cart-icon">shopping_cart</i></a>
             </div>
             <div class="dropdown">
-                <i class="material-icons user-icon" style="font-size: 55px;">account_circle</i>
+                <i class="material-icons user-icon">account_circle</i>
                 <div class="drop-content">
                 <a href="">Perfil</a>
                 <a href="thewitcher3.html">Sair</a>
@@ -85,58 +86,38 @@
 
 </nav>
 
-<!-- search bar -->
 
-<!-- game info -->
+
 <div class="game-box">
 
   <div class="row-box">
       <div class="game-card">
-        <h1 class="game-name">The Witcher 3: Wild Hunt</h1>
-        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/0/06/TW3_Wild_Hunt.png/270px-TW3_Wild_Hunt.png" class="game-poster" alt="The Witcher 3">
-        <p class="game-price">R$ 129,99</p>
-        <button class="carrinho-button"><img src="img/Carinho-Branco.png" class="img-card"></button>
+          <div class="card1">
+              <h1 class="game-name">The Witcher 3: Wild Hunt</h1>
+              <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/292030/header.jpg?t=1729246272" class="game-poster" alt="The Witcher 3">
+              <div class="card-price-before"><p class="price-before">R$ 259,00</p></div>
+              <div class="card-price">
+                <p class="price">R$ 129,99</p>
+                <i class="material-symbols-outlined fav-icon outlined">favorite</i>
+                <i class="material-icons add-icon">add_shopping_cart</i>
+              </div>
+          </div>
+          <div class="sinopse-card">
+              <p class="game-sinopse">Você é Geralt de Rívia, mercenário matador de monstros. Você está em um continente devastado pela guerra e infestado de monstros para você explorar à vontade. Sua tarefa é encontrar Ciri, a Criança da Profecia — uma arma viva que pode alterar a forma do mundo.</p>
+              <i class="game-class">Aventura</i>
+              <i class="game-class">Ação</i>
+              <i class="game-class">RPG</i>
+          </div>
       </div>
 
-      <div class="sinopse-card">
-        <p class="trailer"><video  width="600" controls>
+      <div class="trailer-card">
+        <h2>Trailer</h2>
+          <video  width="600" controls class="trailer">
           <source src="https://video.fastly.steamstatic.com/store_trailers/256927226/movie480_vp9.webm?t=1674829926" type="video/mp4">
         </video>
-      </p>
-        <p class="game-sinopse">Você é Geralt de Rívia, mercenário matador de monstros. Você está em um continente devastado pela guerra e infestado de monstros para você explorar à vontade. Sua tarefa é encontrar Ciri, a Criança da Profecia — uma arma viva que pode alterar a forma do mundo.</p>
-      </div>
+    </div>
   </div>
 </div>
-<!-- end game info -->
-
-
-<!-- slide box -->
-
-<div class="slide-box">
-
-    <section aria-label="poster-imgs">
-      <div class="carousel" data-carousel>
-        <button class="carousel-button prev" data-carousel-button="prev">&#10508;</button>
-        <button class="carousel-button next" data-carousel-button="next">&#10509;</button>
-        <ul data-slides>
-          <li class="slide" data-active>
-            <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/292030/ss_0901e64e9d4b8ebaea8348c194e7a3644d2d832d.600x338.jpg?t=1729246272" alt="">
-          </li>
-          <li class="slide">
-            <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/292030/ss_112b1e176c1bd271d8a565eacb6feaf90f240bb2.600x338.jpg?t=1729246272" alt="">
-          </li>
-          <li class="slide">
-            <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/292030/ss_eda99e7f705a113d04ab2a7a36068f3e7b343d17.600x338.jpg?t=1729246272" alt="">
-          </li>
-        </ul>
-      </div>
-    </section>
-
-</div>
-
-
-<!-- end slide box -->
-
 
 </body>
 
@@ -146,9 +127,13 @@
 <footer>
 
   <nav class="navfooter">
-    <div class="navfot">  
+    <div class="navfot" id="contact">  
+      <a href="" class="fa fa-facebook fot-icon"></a>
+      <a href="" class="fa fa-whatsapp fot-icon"></a>
+      <a href="" class="fa fa-twitter fot-icon"></a>
+      <a href="" class="fa fa-instagram fot-icon"></a>
     </div>
-  </nav>
+  </div>
 
 
 </footer>
