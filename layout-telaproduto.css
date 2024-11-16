@@ -11,7 +11,7 @@ html {
 body {   
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(180deg, #251a5e 35%, #13161a 65%);
+  background-image: linear-gradient(180deg, #251a5e 35%, #13161a 85%);
   overflow-y: auto;
   overflow-x: hidden;
   min-height: 100vh;
@@ -160,7 +160,7 @@ button a{
   border-radius: 30px;
   border-color: #2b2d31;
   border-style: solid;
-  margin-top: 50px;
+  margin-top: 30px;
   justify-content: space-between;
   align-items: center;
 }
@@ -281,11 +281,10 @@ button a{
 
 /* game-box */
 .game-box {
-  width: 1200px;
+  width: 1100px;
   height: 600px;
   margin: 0 auto;
-  margin-top: 10px;
-  align-content: center;
+  margin-top: 20px;
 }
 
 .row-box {
@@ -299,7 +298,7 @@ button a{
   height: 550px;
   border-radius: 5px;
   background-color: #2b2d31;
-  border: 1px solid whitesmoke;
+  border: 1px solid #5e5f61;
   text-align: center;
 }
 
@@ -376,7 +375,7 @@ button a{
   margin: auto;
   width: 350px;
   height: 200px;
-  border: 1px solid #d9dbd9; 
+  border: 1px solid #5e5f61; 
   border-radius: 5px;
   background-color: #212429;
 }
@@ -384,18 +383,17 @@ button a{
 .game-sinopse {
   color: white;
   font-size: 18px;
-  text-align: left;
+  text-align:justify;
+  text-align-last:justify;
   text-overflow: ellipsis;
   word-break: keep-all;
-  width: 350px;
-  padding-left: 5px;
- 
+  width: 340px;
+  padding-left: 3px;
 }
 
 .game-class {
-  background-color: #5e5f61;
+  background-color: #5db084; 
   border-radius: 5px;
-  border: 1px solid #d9dbd9; 
   padding: 5px;
   color: white;
   font-weight: bold;
@@ -409,7 +407,7 @@ button a{
 .trailer-card {
   margin: 10px;
   background-color: #2b2d31;
-  border: 1px solid whitesmoke;
+  border: 1px solid #5e5f61;
   width: 700px;
   height: 550px;
   border-radius: 5px;
