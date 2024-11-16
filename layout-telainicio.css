@@ -353,16 +353,41 @@ align-items: center;
   font-weight: bold;
 }
 
-.price-before {
+
+.card-price-before {
   width: 300px;
-  height: 15px;
+  height: 30px;
+  display: flex;
+  border-top: 1px solid #d9dbd9; 
+  justify-content: space-between;
+}
+
+.price-before { 
   margin-top: 2px;
   padding-top: 5px;
-  border-top: 1px solid #d9dbd9; 
   text-decoration: line-through;
   color:white; 
   font-weight: bold;
 }
+  
+.game-class {
+align-self: center;
+margin-top: 2px;
+}
+
+.game-class i {
+  background-color: #5db084; 
+  border-radius: 5px;
+  padding: 3px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.game-class i:hover {
+  background-color: #505356;
+}
+
 
 .card-price {
   width: 300px;
