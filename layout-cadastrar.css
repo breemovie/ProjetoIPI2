@@ -150,8 +150,9 @@ button a{
 /* footer */
 
 footer {
+  margin-top: auto;
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom:0;
 }
 .navfooter {
