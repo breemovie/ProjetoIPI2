@@ -5,7 +5,8 @@ html {
   padding: 0;
 }
 * {
-    text-decoration: none;              
+    text-decoration: none;   
+    box-sizing: border-box;           
 }
 
 body {   
@@ -48,10 +49,17 @@ header {
 
 
 .navdiv { 
-    background-image: linear-gradient(#13161a 90%, #251a5e);
+    background-color: #13161a ;
     display: flex;
     align-items: center;
     justify-content: center;   
+    column-gap: 15px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
 }
 
 .logo {
@@ -59,43 +67,51 @@ header {
   }
 
 .nav-ul {
-  margin-right: -15px;
+  display: flex;
+  column-gap: 15px;
+  padding: 0;
 }
 
-li {
+.nav-ul li {
     list-style: none;
-    display: inline-block;
     color: white;
     font-size: 18px;
-    font-weight: 600;
-    margin-right: 20px;
+    font-weight: 600;   
     cursor: pointer;
 }
 
-li a{
+.nav-ul li a{
     color: white;
 }
 
-button {
-    background-color: #4cbc85;
-    margin-left: 10px;
-    border-radius: 10px;
-    border-color: #53bf86;
-    border-style: solid;
-    padding: 5px;
-    width: 90px;
+.nav-head-but {
+  display: flex;
+  column-gap: 5px;
+  margin-left: 5px;
 }
 
-button a{
+.navbut {
+    background-color: #4cbc85;
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    width: 100px;
+}
+
+.navbut a{
     color: black;
     font-weight: bold;
     font-size: 15px;
 }
 
+.navbut:hover {
+  background-color: #7bcc9e;
+}
+
 .cart-div {
-  margin-right: 10px;
   height: 30px;
 }
+
 .cart-icon {
   font-size: 32px;
   color: #d9dbd9;
@@ -103,7 +119,8 @@ button a{
 }
 
 .user-icon {
-  font-size: 55px;
+  margin: 5px 0px 5px 0px;
+  font-size: 60px;
   color: #d9dbd9;
   cursor: pointer;
 }
@@ -155,7 +172,7 @@ button a{
   display: flex;
   background-color: #3f4246;
   width: 600px;
-  height: 30px;
+  height: 40px;
   margin: 0 auto;
   border-radius: 30px;
   border-color: #2b2d31;
@@ -368,7 +385,10 @@ button a{
   margin-top: 9px;
   color: #d9dbd9;
   cursor: pointer; 
-  
+}
+
+.add-icon:hover {
+  transform: scale(1.1);
 }
 
 .sinopse-card {
@@ -421,6 +441,7 @@ button a{
   text-align: left;
   color: white;
 }
+
 .trailer {
   margin-top: 5px;
 }
@@ -465,6 +486,10 @@ footer {
   color: #d9dbd9;
   padding: 5px;
   font-size: 20px;
+}
+
+.fot-icon:hover {
+  transform: scale(1.5);
 }
 
 /* end footer */

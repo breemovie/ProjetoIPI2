@@ -11,29 +11,35 @@
     <link rel="stylesheet" href="layout-cadastrar.css">
 </head>
 
-<header>
-    <nav class="navbar">
+<header>   
         <div class="navdiv">
-            <div class="nav-logo"><a href="telainicial.html"><img class="logo" src="img/logocompleto.png"></a></div>
-            <ul>
-                <li onClick="document.getElementById('contact').scrollIntoView();">Suporte</li>
+            <a href="telainicial.html"><img class="logo" src="img/logocompleto.png"></a>
+            <div class="header-right">            
+                <ul>
+                    <li onClick="document.getElementById('contact').scrollIntoView();">Suporte</li>
+                </ul>  
                 <button class="navbut"><a href="login.html">Login</a></button>
-            </ul>       
-            </div>
-        </nav>
+            </div>     
+        </div>
 </header>
 
 <body>
 
     <div class="login-box">
         <img src="img/FlyLogo.png" class="logo-box" alt="Logo">
-            <form action="login.html">
-                <h1>Cadastrar</h1>
-                <input type="text" id="username" name="user" class="input-layout" placeholder="Usuário" required><br>
-                <input type="email" id="email" name="email" class="input-layout" placeholder="E-mail" required><br>
-                <input type="password" id="senha" name="senha" class="input-layout" placeholder="Senha" required><br>
+        <h1>Cadastrar</h1>
+            <form action="login.html" class="cad-form">
+                <div class="log-inputs">
+                    <input type="text" id="username" name="user" class="input-layout" placeholder="Nome" required>
+                    <input type="text" id="user-s-name" name="user-sobre" class="input-layout" placeholder="Sobrenome" required>
+                    <input type="email" id="email" name="email" class="input-layout" placeholder="E-mail" required>
+                    <input type="email" id="con-email" name="conf-email" class="input-layout" placeholder="Confirmar e-mail" required>
+                    <input type="password" id="senha" name="senha" class="input-layout" placeholder="Senha" required>
+                    <input type="password" id="con-senha" name="conf-senha" class="input-layout" placeholder="Confirmar senha" required>
+                </div>
                 <button class="cadastrar-button" type="submit">Cadastrar</button>
             </form>
+            
     </div>
 
 

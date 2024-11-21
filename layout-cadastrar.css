@@ -1,12 +1,13 @@
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+ 
+}
 
 html {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-}
-
-* {
-  text-decoration: none;
 }
 
 body {
@@ -29,10 +30,15 @@ header {
   top:0;
 }
 
+.header-right {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
 
 .navdiv {
-  height: 40px;
-  background-image: linear-gradient(#13161a 90%, #251a5e);
+  height: 70px;
+  background-color: #13161a;
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -44,40 +50,37 @@ header {
   width: 150px;
 }
 
-li {
+.header-right li {
   color: white;
   list-style: none;
-  display: inline-block;
   font-size: 18px;
   font-weight: 600;
-  margin-right: 25px;
-  margin-left: 25px;
-  justify-content: center;
   cursor: pointer;
 }
 
-li a{
+.header-right li a{
   color: white;
   
 }
 
-button{
+.header-right button{
   background-color: #53bf86;
-  margin-left: 10px;
   border-radius: 10px;
   border-color: #53bf86;
   border-style: solid;
-  padding: 5px;
   width: 90px;
-
-
+  height: 30px;
 }
 
-button a{
-  color: black; font-weight: bold; font-size: 15px;
+.header-right button a{
+  color: black; 
+  font-weight: bold; 
+  font-size: 15px;
 } 
 
-
+.header-right button:hover {
+  background-color: #7bcc9e;
+}
 
 
 /* end nav bottom */
@@ -87,13 +90,13 @@ button a{
 /* login box */
 
   .login-box {
-      margin:  0 auto;
-      margin-top: 80px;
-      width: 400px;
+      margin: 80px auto 30px auto;
+      width: 600px;
       height: 600px;
       border-radius: 5px;
       background-color: #2a2a2a;
-      border: 5px solid #2b2d31;   
+      border: 5px solid #2b2d31;  
+      justify-items: center; 
   }
 
   .logo-box {
@@ -104,17 +107,28 @@ button a{
       margin-top: 50px;    
   }
 
+  .cad-form {
+    width: 550px;
+    height: 300px;
+    justify-items: center;
+      
+  }
+
+  .log-inputs {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    column-gap: 10px;
+    grid-template-rows: 25px 25px 25px;
+    row-gap: 20px;
+  }
+
+
   h1{
       margin-top: 15px;
       text-align: center;
       font-size: 30px;
       color:rgb(255, 255, 255); 
       font-family:Arial, Helvetica, sans-serif;    
-  }
-
-  form { 
-      color:rgb(255, 255, 255);
-      text-align: center;
   }
 
   ::placeholder {
@@ -125,25 +139,23 @@ button a{
     border-radius: 5px;
     border-style: solid;
     margin-bottom: 10px;
-    height: 20px;
-    width: 200px;
+    height: 25px;
+    width: 250px;
   }
   
-  .p-button {
-     text-align: center;  
-  }
-
-  .cadastrar-button{
-      margin-top: 10px;
+.cadastrar-button{
+      margin-top: 40px;
       background-color: #4dbd82;
       border-radius: 10px;
       border-color: #4dbd82;
-      border-style: solid;
+      border: none;
       width: 150px;
+      height: 30px;
       color: white;
       font-size: 14px;
       font-weight: bold;
       cursor: pointer;
+      text-align: center;  
   }
 /* end login box */
 
@@ -175,5 +187,9 @@ footer {
   color: #d9dbd9;
   padding: 5px;
   font-size: 20px;
+}
+
+.fot-icon:hover {
+  transform: scale(1.5);
 }
 /* end footer */
