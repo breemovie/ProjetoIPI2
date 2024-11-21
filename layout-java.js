@@ -27,7 +27,9 @@ setInterval(() => {
 })
 
 //
-// form pass
+
+
+// form esqueceu senha
 
 function openForm() {
   document.getElementById("esq-senha").style.display = "block";
@@ -36,7 +38,6 @@ function openForm() {
 function closeForm() {
   document.getElementById("esq-senha").style.display = "none";
 }
-
 
 //
 
@@ -123,7 +124,7 @@ function w3RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-// Add active class to the current button (highlight it)
+// still working on it
 var btnContainer = document.getElementsById("filter-container");
 var btns = btnContainer.getElementsByClassName("filterButton");
 for (var i = 0; i < btns.length; i++) {

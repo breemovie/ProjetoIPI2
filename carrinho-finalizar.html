@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <link rel="stylesheet" href="layout-carrinho.css">
     <title>Carrinho</title>
 </head>
+
 <body>
-    <!-- Barra de navegação superior -->
-    <nav class="navbar">
-        <a class="navbar-brand" href="#"><img class="logo" src="img/logocompleto.png" alt=""></a>
-        <div class="links-navbar flex">
-            <ul class="menu flex">
-                <li class="item-menu"><a class="link-menu" href="telainicial.html">Produtos</a></li>
-                <li class="item-menu"><a class="link-menu" href="#">Quem somos</a></li>
-                <li class="item-menu"><a class="link-menu" href="#">Ajuda</a></li>
-            </ul>
-            <button class="botao"><a href="login.html">Entrar</a></button>
-            <button class="botao"><a href="cadastrar.html">Cadastrar</a></button>
-            <a class="carrinho" href="carrinho.html">
-                <img src="img/carrinho.png" alt="">
-                <span class="quantidade">99+</span>
-            </a>
-        </div>
-    </nav>
+    <header>
+        <nav class="header">
+              <a href="telainicial.html"><img class="logo" src="img/logocompleto.png"></a>
+              <div class="header-right">
+                <ul>
+                  <li><a href="telainicial.html">Loja</a></li>
+                  <li onClick="document.getElementById('contact').scrollIntoView();">Suporte</li>
+                  <li><a href="carrinho.html">Meu Carrinho</a></li>
+                </ul>
+                <div class="cart-div">
+                  <a href="carrinho.html"><i class="material-symbols-outlined cart-icon">shopping_cart</i></a>
+                </div>
+                <div class="div-header-but">
+                  <button class="header-but"><a href="login.html">Login</a></button>
+                  <button class="header-but"><a href="cadastrar.html">Cadastrar</a></button>
+                </div>
+            </div>
+          </nav>
+    </header>
 
     <div class="container">
-        <!-- Coluna de info -->
+       
         <div class="coluna-info">
             <div>
                 <h4>Dados pessoais</h4>
@@ -90,7 +96,7 @@
             <button class="finalizar">Finalizar compra</button>
         </div>
 
-        <!-- Coluna com os produtos da sacola -->
+        
         <div class="coluna-produtos-finalizar">
             <div class="cartao">
                 <div class="conteudo-cartao">
@@ -121,5 +127,17 @@
             </div>
         </div>
     </div>
+
+    <footer>
+        <nav class="footer">
+          <div class="div-footer" id="contact">  
+            <a href="" class="fa fa-facebook fot-icon"></a>
+            <a href="" class="fa fa-whatsapp fot-icon"></a>
+            <a href="" class="fa fa-twitter fot-icon"></a>
+            <a href="" class="fa fa-instagram fot-icon"></a>
+          </div>
+        </div>
+    </footer>
+      
 </body>
 </html>

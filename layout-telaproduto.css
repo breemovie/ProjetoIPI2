@@ -48,7 +48,7 @@ header {
 }
 
 
-.navdiv { 
+.header { 
     background-color: #13161a ;
     display: flex;
     align-items: center;
@@ -66,13 +66,13 @@ header {
     width: 150px;
   }
 
-.nav-ul {
+.header-right ul {
   display: flex;
   column-gap: 15px;
   padding: 0;
 }
 
-.nav-ul li {
+.header-right li {
     list-style: none;
     color: white;
     font-size: 18px;
@@ -80,17 +80,17 @@ header {
     cursor: pointer;
 }
 
-.nav-ul li a{
+.header-right li a{
     color: white;
 }
 
-.nav-head-but {
+.div-header-but {
   display: flex;
   column-gap: 5px;
   margin-left: 5px;
 }
 
-.navbut {
+.header-but {
     background-color: #4cbc85;
     border-radius: 10px;
     border: none;
@@ -98,13 +98,13 @@ header {
     width: 100px;
 }
 
-.navbut a{
+.header-but a{
     color: black;
     font-weight: bold;
     font-size: 15px;
 }
 
-.navbut:hover {
+.header-but:hover {
   background-color: #7bcc9e;
 }
 
@@ -448,10 +448,7 @@ header {
 
 /* end game-box*/
 
-
-
 /* footer */
-
 footer {
   margin-top: auto;
   width: 100%;
@@ -459,7 +456,7 @@ footer {
   position: relative;
 }
 
-.navfooter {
+.footer {
   background-color: #1d1f22;
   align-items: center;
   justify-content: center;
@@ -468,13 +465,7 @@ footer {
   
 }
 
-.foot-text {
-  color: white;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.navfot {
+.div-footer {
   width: 600px;
   height: 60px;
   align-self: center;
@@ -491,7 +482,6 @@ footer {
 .fot-icon:hover {
   transform: scale(1.5);
 }
-
 /* end footer */
 
 
