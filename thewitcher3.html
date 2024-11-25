@@ -36,56 +36,131 @@
      </div>
   </header>
   
-<nav class="search-bar">
-    <div class="bars-ul">
-        <div class="bar-icon"><i class="fa fa-bars"></i></div>
-         <div class="drop-search">
-              <a href="usercad-telainicial.html">Home</a>
-              <a href="">Categorias</a>
-                <div class="drop-categorias">
-                  <a href="">Ação</a>
-                  <a href="">Aventura</a>
-                  <a href="">Corrida</a>
-                </div>
+  <div class="div-search-all">
+    <nav class="search-bar">
+          <div class="bars-ul">
+                <div class="bar-icon"><i class="fa fa-bars"></i></div>
+                  <div class="drop-search">          
+                      <a href="telainicial.html">Home</a>
+                      <div class="sub-c"><a href="">Categorias</a>
+                          <div class="drop-categorias">
+                            <a href="">Ação</a>
+                            <a href="">Aventura</a>
+                            <a href="">Corrida</a>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+        <form class="search-holder">
+          <i class="material-icons search-icon">search</i>
+          <input type="search" placeholder="Pesquisar" class="s-bar" id="search-prodscreen" onkeyup="prodSearch()" >
+        </form>
+    </nav>
+    <!-- search produtos  -->
+        <div class="produtos-screenprod" id="prodscreenfilt">
+          
+          <div class="noprod-span" id="nonfound">
+            <p>Nenhum produto encontrado.</p>
           </div>
+
+            <div class="row-produtos-screenprod" id="containertag-prod">
+
+                  <div class="coltag-produto">
+                      <a href="thewitcher3.html"><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/292030/header.jpg?t=1729246272" class="img-poster-tag" alt="The Witcher: Wild Hunt"></a>
+                      <div class="div-gameprice-tag">
+                        <p class="gamename-tag">The Witcher 3: Wild Hunt</p>
+                        <p class="price-tag">R$ 129,99</p> 
+                      </div>           
+                  </div>
+
+                  <div class="coltag-produto"> 
+                      <a href=""><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1888930/header.jpg?t=1728603021" class="img-poster-tag" alt="The Last Of Us"></a>
+                      <div class="div-gameprice-tag">
+                        <p class="gamename-tag">The Last Of Us: Part I</p>
+                        <p class="price-tag">R$ 249,90</p>
+                      </div>
+                  </div>
+
+                  <div class="coltag-produto">
+                      <a href=""><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2322010/header.jpg?t=1728067832" class="img-poster-tag" alt="The Witcher: Wild Hunt"></a>
+                      <div class="div-gameprice-tag">
+                        <p class="gamename-tag">God of War: Ragnarök</p>
+                        <p class="price-tag">R$ 249,90</p> 
+                      </div>           
+                  </div>
+              
+                  <div class="coltag-produto"> 
+                    <a href=""><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/381210/header.jpg?t=1729537301" class="img-poster-tag" alt="The Last Of Us"></a>
+                    <div class="div-gameprice-tag">
+                      <p class="gamename-tag">Dead by Daylight</p>
+                      <p class="price-tag">R$ 29,90</p>
+                    </div>
+                </div>
+
+                <div class="coltag-produto">
+                      <a href=""><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/319630/header.jpg?t=1724158918" class="img-poster-tag" alt="The Witcher: Wild Hunt"></a>
+                      <div class="div-gameprice-tag">
+                        <p class="gamename-tag">Life Is Strange</p>
+                        <p class="price-tag">R$ 39,90</p> 
+                      </div>           
+                </div>
+            
+                <div class="coltag-produto"> 
+                  <a href=""><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg?t=1726606628" class="img-poster-tag" alt="The Last Of Us"></a>
+                  <div class="div-gameprice-tag">
+                    <p class="gamename-tag">Grand Theft Auto V</p>
+                    <p class="price-tag">R$ 79,90</p>
+                  </div>
+              </div>
+          </div>
+
         </div>
-      </div>
-    <form class="search-holder">
-      <input type="search" placeholder="Search..." class="s-bar">
-      <button class="search-button"><i class="fa fa-search"></i></button>
-    </form>
-</nav>
+    <!-- end search produtos  -->   
+</div>
 
 
 <div class="game-box">
 
   <div class="row-box">
-      <div class="game-card">
-          <div class="card1">
-              <h1 class="game-name">The Witcher 3: Wild Hunt</h1>
-              <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/292030/header.jpg?t=1729246272" class="game-poster" alt="The Witcher 3">
-              <div class="card-price-before"><p class="price-before">R$ 259,00</p></div>
-              <div class="card-price">
-                <p class="price">R$ 129,99</p>
-                <i class="material-symbols-outlined fav-icon outlined">favorite</i>
-                <i class="material-icons add-icon">add_shopping_cart</i>
-              </div>
+        <div class="game-card">
+            <div class="card1">
+                <h1 class="game-name">The Witcher 3: Wild Hunt</h1>
+                <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/292030/header.jpg?t=1729246272" class="game-poster" alt="The Witcher 3">
+                <div class="card-price-before"><p class="price-before">R$ 259,00</p></div>
+                <div class="card-price">
+                  <p class="price">R$ 129,99</p>
+                  <i class="material-symbols-outlined fav-icon outlined">favorite</i>
+                  <i class="material-icons add-icon">add_shopping_cart</i>
+                </div>
+            </div>
+            <div class="sinopse-card">
+                <p class="game-sinopse">Você é Geralt de Rívia, mercenário matador de monstros. Você está em um continente devastado pela guerra e infestado de monstros para você explorar à vontade. Sua tarefa é encontrar Ciri, a Criança da Profecia — uma arma viva que pode alterar a forma do mundo.</p>
+                <i class="game-class">Aventura</i>
+                <i class="game-class">Ação</i>
+                <i class="game-class">RPG</i>
+            </div>
+        </div>
+
+        <div class="trailer-card">
+          <h2>Trailer</h2>
+          <div class="trailer-teasers-slide">
+            <video width="600" height="340" controls class="trailer">
+              <source src="https://video.fastly.steamstatic.com/store_trailers/256927226/movie480_vp9.webm?t=1674829926" type="video/mp4">
+              </video>          
           </div>
-          <div class="sinopse-card">
-              <p class="game-sinopse">Você é Geralt de Rívia, mercenário matador de monstros. Você está em um continente devastado pela guerra e infestado de monstros para você explorar à vontade. Sua tarefa é encontrar Ciri, a Criança da Profecia — uma arma viva que pode alterar a forma do mundo.</p>
-              <i class="game-class">Aventura</i>
-              <i class="game-class">Ação</i>
-              <i class="game-class">RPG</i>
+          <div class="teasers-slide">
+              <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_849ec8dcc6f8df1c0b2c509584c9fc9e51f88cfa.600x338.jpg?t=1730212926"> 
+              <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_07812c174bb6b96c29895ddc27404143df7aba6d.600x338.jpg?t=1730212926">
+              <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_dc55eeb409d6e187456a8e159018e8da098fa468.600x338.jpg?t=1730212926">
+              <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_608af6cfe0eab3f37265550b391732a3e88d1a4f.600x338.jpg?t=1730212926">
+              <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_dc33eb233555c13fce939ccaac667bc54e3c4a27.600x338.jpg?t=1730212926">
+              <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_dc55eeb409d6e187456a8e159018e8da098fa468.600x338.jpg?t=1730212926">             
           </div>
+
       </div>
 
-      <div class="trailer-card">
-        <h2>Trailer</h2>
-          <video  width="600" controls class="trailer">
-          <source src="https://video.fastly.steamstatic.com/store_trailers/256927226/movie480_vp9.webm?t=1674829926" type="video/mp4">
-        </video>
-    </div>
   </div>
+  
 </div>
 
 

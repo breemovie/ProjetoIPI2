@@ -60,7 +60,7 @@ const favIcons = document.querySelectorAll('.fav-icon');
     });
 //
 
-// search filter
+// search filter  tela inicial 
 function myFunction() {
   const input = document.getElementById('search');
   const filter = input.value.toLowerCase().trim();
@@ -88,6 +88,46 @@ if (hasVisibleItems) {
   noResultsMessage.style.display = 'block';
 }
 }
+//
+
+// search filter tela produto
+function prodSearch() {
+  document.getElementById("prodscreenfilt").style.display = "block";
+  const input = document.getElementById('search-prodscreen');
+  const filter = input.value.toLowerCase().trim();
+  const items = document.getElementById('containertag-prod').getElementsByClassName('coltag-produto');
+  let hasVisibleItems = false;
+
+  for (let i = 0; i < items.length; i++) {
+    const textValue = items[i].textContent || items[i].innerText;
+
+    if (textValue.toLowerCase().includes(filter)) {
+      items[i].style.display = ''; 
+      hasVisibleItems = true;
+    } else {
+      items[i].style.display = 'none';
+    }
+   
+  }
+
+const noResultsMessage = document.getElementById('nonfound');  
+  
+if (hasVisibleItems) {
+  noResultsMessage.style.display = 'none';
+} else {
+  noResultsMessage.style.display = 'block';
+}
+}
+
+window.addEventListener('click', function(event) {
+  const filterContainer = document.getElementById('prodscreenfilt');
+  const searchInput = document.getElementById('search-prodscreen');
+
+  
+  if (!filterContainer.contains(event.target) && !searchInput.contains(event.target)) {
+      filterContainer.style.display = 'none';  
+  }
+});
 //
 
 // filter categorias
