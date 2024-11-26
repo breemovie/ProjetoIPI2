@@ -5,14 +5,13 @@
       <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TWILIGHT GAMES - THE WITCHER 3</title>
-    <script src="layout-java.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <script src="script-tela-produto.js" defer></script>
     <link rel="stylesheet" href="layout-telaproduto.css">
   </head>
 
- 
 
 <body>
 
@@ -38,19 +37,31 @@
   
   <div class="div-search-all">
     <nav class="search-bar">
-          <div class="bars-ul">
-                <div class="bar-icon"><i class="fa fa-bars"></i></div>
-                  <div class="drop-search">          
-                      <a href="telainicial.html">Home</a>
-                      <div class="sub-c"><a href="">Categorias</a>
-                          <div class="drop-categorias">
-                            <a href="">Ação</a>
-                            <a href="">Aventura</a>
-                            <a href="">Corrida</a>
-                          </div>
-                      </div>
-                  </div>
+          <div class="barra-nav">
+                    <div class="barra-dropdown-div drop-inicio">
+                        <i>Página Inicial</i>
+                        <div class="barra-sub-div drop-loja">
+                          <a href="">Home</a>
+                          <a href="">Novidades</a>
+                          <a href="">Ofertas</a>
+                        </div>
+                    </div>                          
+                    <div class="barra-dropdown-div sub-c">
+                        <i>Categorias</i>
+                        <div class="barra-sub-div drop-categorias">
+                          <a href="">Ação</a>
+                          <a href="">Aventura</a>
+                          <a href="">Corrida</a>
+                        </div>
+                    </div>        
+                    <div class="barra-dropdown-div">
+                      <i>Novidades</i>
+                    </div>   
+                    <div class="barra-dropdown-div">
+                      <i>Lançamentos</i>
+                    </div>        
             </div>
+
         <form class="search-holder">
           <i class="material-icons search-icon">search</i>
           <input type="search" placeholder="Pesquisar" class="s-bar" id="search-prodscreen" onkeyup="prodSearch()" >
@@ -119,50 +130,176 @@
 </div>
 
 
-<div class="game-box">
+<div class="game-header-name">
+  <h2>The Witcher 3: Wild Hunt</h2>
+</div>
 
-  <div class="row-box">
-        <div class="game-card">
-            <div class="card1">
-                <h1 class="game-name">The Witcher 3: Wild Hunt</h1>
-                <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/292030/header.jpg?t=1729246272" class="game-poster" alt="The Witcher 3">
-                <div class="card-price-before"><p class="price-before">R$ 259,00</p></div>
-                <div class="card-price">
-                  <p class="price">R$ 129,99</p>
-                  <i class="material-symbols-outlined fav-icon outlined">favorite</i>
-                  <i class="material-icons add-icon">add_shopping_cart</i>
-                </div>
+  <div class="game-box">
+
+    <div class="row-box">     
+        <div class="trailer-card">
+            <div class="trailer-teasers-slide">
+              <video width="450" height="255" controls class="trailer">
+                <source src="https://video.fastly.steamstatic.com/store_trailers/256927226/movie480_vp9.webm?t=1674829926" type="video/mp4">
+                </video>          
             </div>
-            <div class="sinopse-card">
-                <p class="game-sinopse">Você é Geralt de Rívia, mercenário matador de monstros. Você está em um continente devastado pela guerra e infestado de monstros para você explorar à vontade. Sua tarefa é encontrar Ciri, a Criança da Profecia — uma arma viva que pode alterar a forma do mundo.</p>
+          <div class="slide-teasers-container">
+            <div class="left-arrow-div">
+              <div class="left-arrow"><span class="material-symbols-outlined arrow-icon" id="scroll-left">chevron_left</span></div>
+            </div>
+            <div class="teasers-slide" id="slide-teasers">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_849ec8dcc6f8df1c0b2c509584c9fc9e51f88cfa.600x338.jpg?t=1730212926"> 
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_07812c174bb6b96c29895ddc27404143df7aba6d.600x338.jpg?t=1730212926">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_dc55eeb409d6e187456a8e159018e8da098fa468.600x338.jpg?t=1730212926"> 
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_608af6cfe0eab3f37265550b391732a3e88d1a4f.600x338.jpg?t=1730212926">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_dc33eb233555c13fce939ccaac667bc54e3c4a27.600x338.jpg?t=1730212926">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_dc55eeb409d6e187456a8e159018e8da098fa468.600x338.jpg?t=1730212926">              
+            </div>
+            <div class="right-arrow-div">
+              <div class="right-arrow"><span class="material-symbols-outlined arrow-icon" id="scroll-right">chevron_right</span></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="game-card">
+          <div class="card1">
+            <p class="game-name">The Witcher 3: Wild Hunt</p>
+              <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/292030/header.jpg?t=1729246272" class="game-poster" alt="The Witcher 3">            
+              <div class="card-price-before">
+                <i class="price-before">R$ 259,00</i>
+                <i class="discount">-50%</i>
+              </div>
+              <div class="card-price">
+                <p class="price">R$ 129,99</p>
+                  <div class="card-price-icons-div">
+                    <div class="fav-icon-div"><i class="material-symbols-outlined fav-icon outlined">favorite</i></div>
+                    <div class="add-icon-div"><i class="material-icons add-icon">add_shopping_cart</i></div>
+                  </div>
+              </div>
+          </div>
+          <div class="game-class-edition-div">
+              <div class="game-class-div">
                 <i class="game-class">Aventura</i>
                 <i class="game-class">Ação</i>
                 <i class="game-class">RPG</i>
-            </div>
-        </div>
-
-        <div class="trailer-card">
-          <h2>Trailer</h2>
-          <div class="trailer-teasers-slide">
-            <video width="600" height="340" controls class="trailer">
-              <source src="https://video.fastly.steamstatic.com/store_trailers/256927226/movie480_vp9.webm?t=1674829926" type="video/mp4">
-              </video>          
-          </div>
-          <div class="teasers-slide">
-              <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_849ec8dcc6f8df1c0b2c509584c9fc9e51f88cfa.600x338.jpg?t=1730212926"> 
-              <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_07812c174bb6b96c29895ddc27404143df7aba6d.600x338.jpg?t=1730212926">
-              <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_dc55eeb409d6e187456a8e159018e8da098fa468.600x338.jpg?t=1730212926">
-              <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_608af6cfe0eab3f37265550b391732a3e88d1a4f.600x338.jpg?t=1730212926">
-              <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_dc33eb233555c13fce939ccaac667bc54e3c4a27.600x338.jpg?t=1730212926">
-              <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_dc55eeb409d6e187456a8e159018e8da098fa468.600x338.jpg?t=1730212926">             
-          </div>
-
+              </div>
+              <i class="game-card-edition-tag">Standard Edition</i>
+           </div>
       </div>
-
+    </div>
+    
   </div>
-  
+
+<div class="similares">
+  <h3>Jogos Similares</h3>
+  <div class="similares-slide">
+    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/489830/header.jpg?t=1721923149" alt="skyrim">
+    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/990080/header.jpg?t=1717689083" alt="Hogwarts_Legacy">
+    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/391220/header.jpg?t=1729011444">
+    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg?t=1720558643">
+  </div>
 </div>
 
+
+<div class="review-container">
+  <h4>Últimas Reviews</h4>
+
+    <div class="editions-reviews-slide">
+
+        <!-- review-box  --> 
+            <div class="review-box">
+                  <div class="stars-div">
+                    <span class="material-symbols-outlined star-icon">star</span>
+                    <span class="material-symbols-outlined star-icon">star</span>
+                    <span class="material-symbols-outlined star-icon">star</span>
+                    <span class="material-symbols-outlined star-icon">star</span>
+                    <span class="material-symbols-outlined star-icon">star</span>
+                </div>
+              <div class="review-title">
+                <p>Review</p>
+              </div>
+              <div class="review-user">
+                <i class="material-icons review-user-icon">account_circle</i>
+                <div class="review-user-data">
+                  <i class="review-nome">Usuário</i>
+                  <i class="review-data">25/11/2024</i>
+                </div>
+              </div>
+            </div>
+    <!-- end review-box  -->
+
+    <!-- review-box  --> 
+          <div class="review-box">
+            <div class="stars-div">
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+          </div>
+            <div class="review-title">
+              <p>Review</p>
+            </div>
+            <div class="review-user">
+              <i class="material-icons review-user-icon">account_circle</i>
+              <div class="review-user-data">
+                <i class="review-nome">Usuário</i>
+                <i class="review-data">25/11/2024</i>
+              </div>
+            </div>
+          </div>
+      <!-- end review-box  -->
+
+      <!-- review-box  --> 
+          <div class="review-box">
+            <div class="stars-div">
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+          </div>
+            <div class="review-title">
+              <p>Review</p>
+            </div>
+            <div class="review-user">
+              <i class="material-icons review-user-icon">account_circle</i>
+              <div class="review-user-data">
+                <i class="review-nome">Usuário</i>
+                <i class="review-data">25/11/2024</i>
+              </div>
+            </div>
+          </div>
+      <!-- end review-box  -->
+
+      <!-- review-box  --> 
+          <div class="review-box">
+            <div class="stars-div">
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+              <span class="material-symbols-outlined star-icon">star</span>
+          </div>
+            <div class="review-title">
+              <p>Review</p>
+            </div>
+            <div class="review-user">
+              <i class="material-icons review-user-icon">account_circle</i>
+              <div class="review-user-data">
+                <i class="review-nome">Usuário</i>
+                <i class="review-data">25/11/2024</i>
+              </div>
+            </div>
+          </div>
+      <!-- end review-box  -->
+      
+    
+          
+    </div>
+
+</div>
 
 <footer>
 
