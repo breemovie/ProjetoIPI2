@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
-    <script src="script-tela-login-cadastro.js" defer></script>
-    <link rel="stylesheet" href="layout-login.css">
+    <script src="main/script-tela-login-cadastro.js" defer></script>
+    <link rel="stylesheet" href="main/layout-login.css">
     
 </head>
 
@@ -32,14 +32,14 @@
 
     <div class="login-box">
         <img src="img/FlyLogo.png" class="logo-box" alt="Logo">
-        <form class="login-form" action="usercad-telainicial.html">
+        <form class="login-form" action="telainicial.html">
             <h1>Login</h1>   
             <form>  
                 <div class="inputs-log">         
                     <input type="email" id="email" name="email" placeholder="E-mail" class="input-layout" required>
                     <input type="password" id="senha" name="senha" placeholder="Senha" class="input-layout" required>
                 </div> 
-                <button class="entrar-but" type="submit" id="entrarB">Entrar</button><a href="telainicial.html"></a>
+                <button class="entrar-but" type="submit" id="entrarB" onclick="login()">Entrar</button>
             </form> 
             <p class="p-esqueceu" onclick="openForm()">Esqueceu a senha?</p>
             <form  class="esqueceu-form" id="esq-senha">

@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
-    <script src="script-tela-inicial.js" defer></script>
-    <link rel="stylesheet" href="layout-telainicio.css">
+    <script src="main/script-tela-inicial.js" defer></script>
+    <link rel="stylesheet" href="main/layout-telainicial.css">
 </head>
 
 
@@ -27,9 +27,16 @@
             <div class="cart-div">
               <a href="carrinho.html"><i class="material-symbols-outlined cart-icon">shopping_cart</i></a>
             </div>
-            <div class="div-header-but">
+            <div class="not-logged div-header-but">
               <button class="header-but"><a href="login.html">Login</a></button>
               <button class="header-but"><a href="cadastrar.html">Cadastrar</a></button>
+            </div>
+            <div class="logged-in dropdown-user">
+              <i class="material-icons user-icon">account_circle</i>
+              <div class="drop-content-user">
+              <a href="">Perfil</a>
+              <a href="" onclick="logout()">Sair</a>
+              </div>
             </div>
         </div>
       </nav>
