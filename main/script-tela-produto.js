@@ -1,58 +1,24 @@
-  // logged in - not logged in layout
-  function checkLoginStatus() {
-    const isLoggedIn = localStorage.getItem('userloggedIn') === 'true';
-    const loggedInElements = document.getElementsByClassName('logged-in');
-    const notLoggedElements = document.getElementsByClassName('not-logged');
-  
-    
-    if (isLoggedIn) {
-      for (let element of loggedInElements) {
-        element.style.display = 'block';
-      }
-      for (let element of notLoggedElements) {
-        element.style.display = 'none';
-      }
-
-    } else {
-      for (let element of notLoggedElements) {
-        element.style.display = 'block';
-      }
-      for (let element of loggedInElements) {
-        element.style.display = 'none';
-      }
-    }
-  }
-
-  window.onload = checkLoginStatus;
-//
-
-// logout
-function logout() {
-  localStorage.removeItem('userloggedIn');
-  checkLoginStatus();
-}
-//
-
-// add fav
-const favIcons = document.querySelectorAll('.fav-icon');
-    favIcons.forEach(function(favIcon) {
-      favIcon.addEventListener('click', function() {
-        if (favIcon.classList.contains('material-symbols-outlined')) {
-          favIcon.classList.remove('material-symbols-outlined');
-          favIcon.classList.add('material-icons');
-          favIcon.classList.remove('outlined');
-          favIcon.classList.add('filled');
-        } else {
-          favIcon.classList.remove('material-icons');
-          favIcon.classList.add('material-symbols-outlined');
-          favIcon.classList.remove('filled');
-          favIcon.classList.add('outlined');
-        }
-      });
+// scprit da div de produtos(search) da tela de produto
+document.addEventListener('DOMContentLoaded', function() {
+    const prodScreenContainer = document.getElementById ('containertag-prod');
+        products.forEach(product => {
+        const prodDiv = document.createElement('div');
+        prodDiv.classList.add('coltag-produto');
+          prodDiv.innerHTML = `
+              <a href="thewitcher3.html" class="coltag-produto-link-div-a">
+                <img src="${product.image}" class="img-poster-tag" alt="${product.name}">
+                <div class="div-gameprice-tag">
+                <div class="gamename-tag">${product.name}</div>
+                <div class="price-tag">${product.price}</div> 
+                </div> 
+              </a>                   
+          `
+          prodScreenContainer.appendChild(prodDiv);
+        });
     });
-//
+// end scprit da div de produtos(search) da tela de produto
 
-// scroll com button 
+// scroll com button (slide trailer) tela de produto
 const scrollContent = document.getElementById('slide-teasers');
 const scrollLeft = document.getElementById('scroll-left');
 const scrollRight = document.getElementById('scroll-right');
@@ -70,6 +36,20 @@ scrollRight.addEventListener('click', () => {
 });
 
 //
+
+// slide trailer tela produto
+   function changeSlide(imageSrc) {
+    const mainImage = document.getElementById('mainSlide');
+    if (imageSrc === "") {
+        mainImage.innerHTML = `<video width="450" height="255" controls class="trailer" id="mainSlideVideo">
+            <source src="https://video.fastly.steamstatic.com/store_trailers/256927226/movie480_vp9.webm?t=1674829926" type="video/webm">
+            <source src="https://video.fastly.steamstatic.com/store_trailers/256927226/movie480.mp4?t=1674829926" type="video/mp4">
+        </video>`;
+    } else {
+        mainImage.innerHTML = `<img src="${imageSrc}" width="450" height="255" alt="Teaser Image">`;
+    }
+}
+// end slide trailer tela produto
 
 // search filter tela produto
 function prodSearch() {
@@ -111,6 +91,21 @@ function prodSearch() {
   });
   //
 
-
-
-
+// add fav
+const favIcons = document.querySelectorAll('.fav-icon');
+favIcons.forEach(function(favIcon) {
+  favIcon.addEventListener('click', function() {
+    if (favIcon.classList.contains('material-symbols-outlined')) {
+      favIcon.classList.remove('material-symbols-outlined');
+      favIcon.classList.add('material-icons');
+      favIcon.classList.remove('outlined');
+      favIcon.classList.add('filled');
+    } else {
+      favIcon.classList.remove('material-icons');
+      favIcon.classList.add('material-symbols-outlined');
+      favIcon.classList.remove('filled');
+      favIcon.classList.add('outlined');
+    }
+  });
+});
+//

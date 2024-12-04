@@ -251,19 +251,24 @@ header {
   display: flex;
   background-color: #505356; 
   border: 3px solid #2b2d31;
-  border-radius: 5px;
+  border-radius: 4px;
   width: 1072px;
   height: 40px;
   justify-content: space-between;
   align-items: center;
   margin: auto;
   margin-top: 20px; 
+  padding: 0 5px 0 10px;
 }
 
 /* filter categories */
 .filterContainer {
   text-align: center;
-  
+  width: auto;
+  height: 40px;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
 }
 
 .filterButton {
@@ -276,14 +281,22 @@ header {
   font-weight: bold;
   font-size: 12px;
   cursor: pointer;
-  margin-left: 8px;
-  margin-right: 5px;
   
 }
 
 .filterButton:hover {
   background: linear-gradient(180deg, rgba(24,27,32,1) 6%, rgba(43,45,49,1) 50%, rgba(24,27,32,1) 94%);  
 }
+
+.filterButton.active {
+  background-color: #1d1f22;
+  border: 2px solid #2b2d31;
+}
+
+.hidden {
+  display: none;
+}
+
 /* end filter categories */
 
 .s-bar {
@@ -293,7 +306,8 @@ header {
   width: 340px;
   height: 28px;
   position: relative;   
-  padding-left: 10px;
+  padding: 0 28px 0 10px;
+  font-weight: bold;
 }
 
 .s-bar:hover{
@@ -307,15 +321,29 @@ header {
 
 .search-holder {
   position: relative;
-  margin-right: 10px; 
+  width: 340px;
+  height: 28px;
+  display: flex;
+}
+
+.search-but-div {
+  margin: 4.5px 0 0 309px;
+  transform: translate(2px, -0.5px);
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  border-left: 2px solid #2b2d31;
+  position: absolute;
 }
 
 .search-icon {
-  z-index: 1;
-  color: black;
-  position: absolute;
-  margin-left: 310px;
-  margin-top: 3px;
+  position: relative;
+  margin: 0 0 0 4px;
+  transform: translate(0px, 1.5px);
+  padding: 0;
+  font-size: 16px;
+  color: #2b2d31;
+  font-weight: bold;
 }
 /* end search bar */
 
@@ -366,7 +394,6 @@ header {
   width: 350px;
   height: 350px;
   position: relative;
-  display: none;
   padding: 23px;
 }
 
@@ -391,6 +418,7 @@ header {
   display: flex;
   border-top: 1px solid #d9dbd9; 
   justify-content: space-between;
+  
 }
 
 .price-before { 
@@ -402,17 +430,20 @@ header {
 }
   
 .game-class {
-align-self: center;
-margin-top: 2px;
+  display: flex;
+  column-gap: 3px;
+  align-self: center;
+  margin-top: 2px;
 }
 
-.game-class i {
+.game-ClassI {
+  width: fit-content;
   background-color: #5db084; 
   border-radius: 5px;
   padding: 3px;
   color: white;
   font-weight: bold;
-  cursor: pointer;
+  cursor: pointer; 
 }
 
 .game-class i:hover {
@@ -432,14 +463,17 @@ margin-top: 2px;
   font-weight: bold;
 }
 
+.card-add-fav {
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+}
+
 
 .fav-icon {
   font-size: 20px;
-  margin-top: 13px;
-  margin-left: 160px;
   cursor: pointer; 
-  transition: color 0.3s ease;
-  
+  transition: color 0.3s ease; 
 }
 
 .fav-icon.filled {
@@ -452,10 +486,8 @@ margin-top: 2px;
 
 .add-icon {
   font-size: 30px;
-  margin-top: 9px;
   color: #d9dbd9;
-  cursor: pointer; 
-  
+  cursor: pointer;  
 }
 
 .add-icon:hover {
