@@ -249,43 +249,131 @@ header {
 /* search bar */
 .search-bar{
   display: flex;
-  background-color: #505356; 
-  border: 3px solid #2b2d31;
+  background-color: #5db084;
+  border: 1px solid #2b2d31;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   width: 1072px;
   height: 40px;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
-  margin-top: 20px; 
+  margin: 20px auto 0 auto;
   padding: 0 5px 0 10px;
 }
 
+.search-bar-left {
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* dropdown pag inicial */
+.pagini-dropdown {
+  width: auto;
+  height: 40px;
+  align-content: center;
+  display: inline-block;
+}
+
+.pagini-drop {
+  display: inline-block;
+  display: none;
+  position: absolute;
+  padding: 0;
+  margin: 12px 0 0 0;
+  background-color: #2b2d31;
+  border: 1px solid #505356;
+  z-index: 10;
+  
+}
+
+.pagini-drop-sub div {
+  width: 100px;
+  height: 30px;
+  padding: 0 0 0 5px;
+  margin: 0;
+  align-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  font-style: italic;
+
+ }
+
+.pagini-drop-sub div:hover {
+  background-color: #5e5f61;
+}
+
+.pagini-drop-sub a {
+  width: 100px;
+  height: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  font-style: italic;  
+}
+
+.pagini-dropdown:hover .pagini-drop {
+  display: block;
+}
+
+/* end dropdown pag inicial */
+
 /* filter categories */
 .filterContainer {
-  text-align: center;
   width: auto;
   height: 40px;
   display: flex;
   column-gap: 10px;
-  align-items: center;
+  align-content: center;
+  display: inline-block;
+}
+
+.filterContainer:hover .filterContainer-dropdown {
+  display: grid;
+}
+
+.filterContainer-dropdown  {
+  background-color: #2b2d31;
+  border: 1px solid #505356;
+  width: fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: auto auto;
+  z-index: 10;
+  display: none;
+  margin: 12px 0 0 0;
+  padding: 0;
+  position: absolute;
 }
 
 .filterButton {
+  position: relative;
   background-color: #2b2d31;
-  border: 2px solid #1d1f22;
-  border-radius: 10px;
   width: 100px;
-  height: 28px;
+  height: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
   font-weight: bold;
   font-size: 12px;
+  font-style: italic;
   cursor: pointer;
-  
+  align-content: center;
+  text-align: left;
+  margin: 0;
+  padding: 0 0 0 5px;
 }
 
 .filterButton:hover {
-  background: linear-gradient(180deg, rgba(24,27,32,1) 6%, rgba(43,45,49,1) 50%, rgba(24,27,32,1) 94%);  
+  /*background: linear-gradient(180deg, rgba(24,27,32,1) 6%, rgba(43,45,49,1) 50%, rgba(24,27,32,1) 94%);*/
+  background-color: #5e5f61; 
 }
 
 .filterButton.active {
@@ -300,7 +388,8 @@ header {
 /* end filter categories */
 
 .s-bar {
-  background-color: rgb(230, 230, 239, 0.5);
+  /*background-color: rgb(230, 230, 239, 0.5);*/
+  background-color: #e5e5e6;
   border-radius: 5px;
   border: 2px solid #1d1f22;
   width: 340px;
@@ -311,7 +400,7 @@ header {
 }
 
 .s-bar:hover{
-  background-color: rgb(230, 230, 239, 0.6);
+  background-color: rgb(230, 230, 239, 0.9);
 }
 
 ::placeholder {
@@ -406,6 +495,8 @@ header {
 }
 
 .coluna-produto h1 {
+  max-width: 300px;
+  max-height: 21px;
   color: white;
   font-size: 18px;
   font-weight: bold;

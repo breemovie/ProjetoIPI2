@@ -197,9 +197,19 @@ header {
   position: relative;
   display: flex;
   column-gap: 15px;
+  align-items: center;
 }
 
-.barra-dropdown-div {
+.barra-nav  i{
+  color: #212429;
+  font-style: normal;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.dropdown-inicio {
   width: auto;
   height: 35px;
   padding: 0;
@@ -208,52 +218,87 @@ header {
   align-content: center;
 }
 
-.barra-dropdown-div  i{
-  color: #212429;
-  font-style: normal;
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 12px;
+.drop-sub-inicio {
+  border: 1px solid #5e5f61;
+  background-color: #2b2d31;
+  width: fit-content;
+  height: fit-content;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  padding: 0; 
+  margin: 7px 0 0 0; 
 }
 
-.barra-dropdown-div a{
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 5px;
+.drop-sub-inicio-link div{
+  width: 100px;
+  height: 30px;  
+  align-content: center;
+  padding: 0 0 0 5px;
   margin: 0;
-  display: block;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  font-weight: bold;
   font-size: 12px;
   font-style: italic;
 }
 
-.barra-dropdown-div a:hover{
+.drop-sub-inicio-link div:hover {
   background-color: #5e5f61;
 }
 
-/* sub drop */
-.drop-inicio:hover .drop-loja {
-  display: block;
+.dropdown-categorias {
+  width: auto;
+  height: 35px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  align-content: center;
 }
 
-.sub-c:hover  .drop-categorias{
-  display: block;
-}
-
-.barra-sub-div {
-  display: none;
-  border: 1px solid #5e5f61;
+.drop-categorias {
   background-color: #2b2d31;
+  border: 1px solid #505356;
+  width: fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: auto auto;
+  z-index: 10;
+  display: none;
+  margin: 8px 0 0 0;
+  padding: 0;
   position: absolute;
-  z-index: 1;
-  padding: 0; 
-  margin: 7px 0 0 0;
-  width: 100px;
-  height: auto;
 }
 
-/* end sub drop */
+.filterButton {
+  position: relative;
+  background-color: #2b2d31;
+  width: 100px;
+  height: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  font-style: italic;
+  cursor: pointer;
+  align-content: center;
+  text-align: left;
+  margin: 0;
+  padding: 0 0 0 5px;
+}
+
+.filterButton:hover{
+  background-color: #5e5f61;
+}
+
+
+.dropdown-inicio:hover .drop-sub-inicio {
+  display: block;
+}
+
+.dropdown-categorias:hover  .drop-categorias{
+  display: grid;
+}
 
 /* end barra navegação */
 
@@ -431,15 +476,15 @@ h2 {
   margin: 15px 0 0 0;
 }
 
-
 .card-price-before {
   width: 300px;
   height: 20px;
+  border-top: 1px solid white;
   padding: 0;
   margin: 2px 0 0 0;
   padding: 0;
   display: flex;
-  column-gap: 10px;
+  column-gap: 5px;
 }
 
 .price-before {
@@ -451,13 +496,18 @@ h2 {
   padding: 0;
 }
 
-.discount {
+.discount-card {
+  width: 45px;
   color:white; 
   font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
   background-color: #5db084;
-  padding: 2px 5px 0 5px;
-  margin: 0;
-  border-radius: 5px;
+  padding: 0 5px 0 5px;
+  margin: 2px 0 0 0;
+  border-radius: 3px;
+  align-items: center;
+  display: flex;
 }
 
 .card-price {
@@ -757,10 +807,30 @@ h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.review-con-top {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
 h4 {
   color: white;
   padding: 0;
   margin: 0 0 15px 0;
+  font-size: 14px;
+}
+
+.add-review {
+  background-color: #4cbc85;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.add-review:hover {
+  background-color: #5db084;
 }
 
 .editions-reviews-slide {
@@ -837,9 +907,9 @@ h4 {
   font-style: normal;
 }
 
-/* en
-d reviews */
+/* end reviews */
 
+/* still working on it 
 .edition-box {
   margin: 10px;
   width: 370px;
@@ -848,6 +918,7 @@ d reviews */
   background-color: #2b2d31;
   border: 1px solid #5e5f61;
 }
+*/
 
 /* footer */
 footer {

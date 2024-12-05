@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="card-price-before">
             <p class="price-before">${product.priceBefore}</p>
                 <div class="game-class">
-                  <i class="game-ClassI">${product.class1}</i>
-                  <i class="game-ClassI">${product.class2}</i>
-                  <i class="game-ClassI">${product.class3}</i>
+                  <i class="game-ClassI">${product.classes[0]}</i>
+                  <i class="game-ClassI">${product.classes[1]}</i>
+                  <i class="game-ClassI">${product.classes[2]}</i>
                 </div>
          </div>
           <div class="card-price">
@@ -29,14 +29,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     const gameClass = document.getElementsByClassName('game-ClassI');
-          for (let i = 0; i < gameClass.length; i++) {
-            const textValue = gameClass[i].textContent || gameClass[i].innerText;
-            if (!textValue.trim()) {
-              gameClass[i].style.display = 'none'; 
-            } else {
-              gameClass[i].style.display = 'block'; 
-            }
-          };
+    for (let i = 0; i < gameClass.length; i++) {
+      const textValue = gameClass[i].textContent || gameClass[i].innerText;
+      if (!textValue.trim()) {
+        gameClass[i].style.display = 'none';  
+      } else {
+        gameClass[i].style.display = 'block';  
+      }
+    };
     
     const gamePriceBefore = document.getElementsByClassName('price-before');
           for (let i = 0; i < gamePriceBefore.length; i++) {
@@ -88,9 +88,7 @@ function myFunction() {
         const allProducts = document.querySelectorAll('.coluna-produto');
         
         allProducts.forEach(product => {
-          const productCategories = product.getAttribute('data-category')
-          .split(',')  
-          .map(category => category.trim());  
+          const productCategories = product.getAttribute('data-category')  
   
             if (selectedCategory === 'all') {
                 product.classList.remove('hidden');
