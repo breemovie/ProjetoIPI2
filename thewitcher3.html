@@ -49,28 +49,29 @@
   <div class="div-search-all">
     <nav class="search-bar">
           <div class="barra-nav">
-                    <div class="barra-dropdown-div drop-inicio">
+                    <div class="dropdown-inicio">
                         <i>Página Inicial</i>
-                        <div class="barra-sub-div drop-loja">
-                          <a href="telainicial.html">Home</a>
-                          <a href="">Novidades</a>
-                          <a href="">Ofertas</a>
+                        <div class="drop-sub-inicio">
+                          <a href="telainicial.html" class="drop-sub-inicio-link"><div>Home</div></a>
                         </div>
                     </div>                          
-                    <div class="barra-dropdown-div sub-c">
+                    <div class="dropdown-categorias">
                         <i>Categorias</i>
-                        <div class="barra-sub-div drop-categorias">
-                          <a href="">Ação</a>
-                          <a href="">Aventura</a>
-                          <a href="">Corrida</a>
+                        <div class="drop-categorias">
+                          <div class="filterButton active" data-category="all">Tudo</div>
+                          <div class="filterButton" data-category="act">Ação</div>
+                          <div class="filterButton" data-category="adv">Aventura</div>
+                          <div class="filterButton" data-category="int">Interativo</div>
+                          <div class="filterButton" data-category="fan">Fantasia</div>
+                          <div class="filterButton" data-category="fps">FPS</div>
+                          <div class="filterButton" data-category="rpg">RPG</div>
+                          <div class="filterButton" data-category="sim">Simulação</div>
+                          <div class="filterButton" data-category="spt">Sports</div>
+                          <div class="filterButton" data-category="ter">Terror</div>
                         </div>
                     </div>        
-                    <div class="barra-dropdown-div">
-                      <i>Novidades</i>
-                    </div>   
-                    <div class="barra-dropdown-div">
-                      <i>Lançamentos</i>
-                    </div>        
+                    <div><i>Novidades</i></div> 
+                    <div><i>Lançamentos</i></div>                                                                                        
             </div>
       <form>
         <div class="search-holder">
@@ -136,7 +137,9 @@
               <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/292030/header.jpg?t=1729246272" class="game-poster" alt="The Witcher 3">            
               <div class="card-price-before">
                 <i class="price-before">R$ 259,00</i>
-                <i class="discount">-50%</i>
+                <div class="discount-card">
+                  <i>-50%</i>
+                </div>
               </div>
               <div class="card-price">
                 <p class="price">R$ 129,99</p>
@@ -171,7 +174,10 @@
 
 
 <div class="review-container">
-  <h4>Últimas Reviews</h4>
+  <div class="review-con-top">
+    <h4>Últimas Reviews</h4>
+    <div><button class="logged-in material-icons add-review">add</button></div>
+  </div>
 
     <div class="editions-reviews-slide">
 
