@@ -2,6 +2,7 @@
   // produtos
   const products = [
     {
+      id: 1,
       name: "The Witcher 3: Wild Hunt",
       category: ["adv", "act", "rpg"],
       classes: ["Aventura","Ação","RPG"],
@@ -11,6 +12,7 @@
       link: "thewitcher3.html"
     },
     {
+      id: 2,
       name: "The Last Of Us: Part I",
       category: ["adv", "act", "ter"],
       classes: ["Aventura","Ação", "Terror"],
@@ -19,6 +21,7 @@
       image: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1888930/header.jpg?t=1728603021"
     },
     {
+      id: 3,
       name: "Uncharted 4: A Thief's End",
       category: ["adv", "act"],
       classes: ["Aventura","Ação", ""],
@@ -27,6 +30,7 @@
       image: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1659420/header_brazilian.jpg?t=1717621447"
     },
     {
+      id: 4,
       name: "Life Is Strange",
       category: ["adv", "int"],
       classes: ["Aventura","Interativo", ""],
@@ -35,6 +39,7 @@
       image: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/319630/header.jpg?t=1724158918"
     },
     {
+      id: 5,
       name: "Grand Theft Auto V",
       category: ["adv", "act", "rpg"],
       classes: ["Aventura","Ação","RPG"],
@@ -43,6 +48,7 @@
       image: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg?t=1726606628"
     },
     {
+      id: 6,
       name: "Hollow Knight",
       category: ["adv", "fan"],
       classes: ["Aventura", "Fantasia", ""],
@@ -51,6 +57,7 @@
       image: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg?t=1695270428"
     },
     {
+      id: 7,
       name: "The Elder Scrolls V: Skyrim",
       category: ["adv", "act", "rpg"],
       classes: ["Aventura","Ação","RPG"],
@@ -59,6 +66,7 @@
       image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/489830/header.jpg?t=1721923149"
     },
     {
+      id: 8,
       name: "EA Sports FC™ 25",
       category: ["spt", "sim"],
       classes: ["Sports", "Simulação", ""],
@@ -67,6 +75,7 @@
       image: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2669320/header.jpg?t=1729643957"
     },
     {
+      id: 9,
       name: "Forza Horizon 4",
       category: ["spt", "sim"],
       classes: ["Sports", "Simulação", ""],
@@ -75,6 +84,7 @@
       image: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1293830/header.jpg?t=1702576030"
     },
     {
+      id: 10,
       name: "Dead by Daylight",
       category: ["ter"],
       classes: ["Terror", "", ""],
@@ -83,6 +93,7 @@
       image: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/381210/header.jpg?t=1729537301"
     },
     {
+      id: 11,
       name: "Cities: Skylines",
       category: ["sim"],
       classes: ["Simulação", "", ""],
@@ -91,6 +102,7 @@
       image: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/255710/header.jpg?t=1729757220"
     },
     {
+      id: 12,
       name: "Fallout 4",
       category: ["act", "act", "fps"],
       classes: ["Aventura", "Ação", "FPS"],
@@ -99,6 +111,7 @@
       image: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/377160/header.jpg?t=1726758475"
     },
     {
+      id: 13,
       name: "God of War: Ragnarök",
       category: ["adv", "act", "rpg"],
       classes: ["Aventura", "Ação", "RPG"],
@@ -107,6 +120,7 @@
       image: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2322010/header.jpg?t=1728067832"
     },
     {
+      id: 14,
       name: "Horizon Forbidden West",
       category: ["adv", "act", "rpg"],
       classes: ["Aventura", "Ação", "RPG"],
@@ -115,6 +129,7 @@
       image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2420110/header.jpg?t=1725653368"
     },
     {
+      id: 15,
       name: "Red Dead Redemption 2",
       category: ["adv", "act", "rpg"],
       classes: ["Aventura", "Ação", "RPG"],
@@ -123,6 +138,7 @@
       image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg?t=1720558643"
     },
     {
+      id: 16,
       name: "Ghost of Tsushima",
       category: ["adv", "act", "rpg"],
       classes: ["Aventura", "Ação", "RPG"],
@@ -131,6 +147,7 @@
       image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2215430/header.jpg?t=1717622497"
     },
     {
+      id: 17,
       name: "Assassin's Creed Valhalla",
       category: ["adv", "act"],
       classes: ["Aventura", "Ação", "RPG"],
@@ -139,6 +156,7 @@
       image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2208920/header.jpg?t=1732122317"
     },
     {
+      id: 18,
       name: "Cyberpunk 2077",
       category: ["adv", "act", "rpg"],
       classes: ["Aventura", "Ação", "RPG"],
@@ -147,6 +165,7 @@
       image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/header.jpg?t=1730212296"
     },
     {
+      id: 19,
       name: "Final Fantasy VII Remake",
       category: ["adv", "fan", "rpg"],
       classes: ["Aventura", "Fantasia", "RPG"],
@@ -155,6 +174,7 @@
       image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1462040/header.jpg?t=1732013233"
     },
     {
+      id: 20,
       name: "Spider-Man: Miles Morales",
       category: ["act", "adv"],
       classes: ["Aventura", "Ação", ""],
@@ -163,6 +183,7 @@
       image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1817190/header.jpg?t=1729525947"
     },
     {
+      id: 21,
       name: "Elden Ring",
       category: ["fan", "rpg"],
       classes: ["Fantasia", "RPG", ""],
@@ -171,6 +192,7 @@
       image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1726158298"
     },
     {
+      id: 22,
       name: "Rise of the Tomb Raider",
       category: ["adv", "act"],
       classes: ["Aventura", "Ação", ""],
@@ -179,6 +201,7 @@
       image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/391220/header.jpg?t=1729011444"
     },
     {
+      id: 23,
       name: "Hogwarts Legacy",
       category: ["adv", "rpg"],
       classes: ["Aventura", "RPG", ""],
@@ -187,6 +210,7 @@
       image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/990080/header.jpg?t=1717689083"
     },
     {
+      id: 24,
       name: "Detroit: Become Human",
       category: ["adv", "int"],
       classes: ["Aventura", "Interativo", ""],
@@ -199,6 +223,14 @@
 
 // categorias : adv(aventura), act(ação), ter(terror), rpg(RPG), fps(FPS), spt(sports), sim(simulação), int(interativo), fan(fantasia).
 
+// tela login 
+function login() {
+  localStorage.setItem('userloggedIn', 'true');
+  console.log('Login status set to true');
+  checkLoginStatus();
+  
+}
+//
 // logged in - not logged in layout
 function checkLoginStatus() {
   const isLoggedIn = localStorage.getItem('userloggedIn') === 'true';
@@ -221,15 +253,14 @@ function checkLoginStatus() {
       element.style.display = 'none';
     }
   }
-}
+};
 
 window.onload = checkLoginStatus;
-
 // logout
 function logout() {
-localStorage.removeItem('userloggedIn');
-checkLoginStatus();
+  localStorage.setItem('userloggedIn', 'false');
+  console.log('Login status set to false');
+  checkLoginStatus();
 }
-
 //
                              

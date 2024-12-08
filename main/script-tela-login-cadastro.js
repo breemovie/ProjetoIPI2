@@ -1,11 +1,3 @@
-// tela login 
-
-function login() {
-    localStorage.setItem('userloggedIn', 'true');
-    checkLoginStatus();
-  }
-  
-//
 
 // form esqueceu senha tela login
 function openForm() {

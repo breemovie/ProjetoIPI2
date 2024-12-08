@@ -91,21 +91,71 @@ function prodSearch() {
   });
   //
 
-// add fav
-const favIcons = document.querySelectorAll('.fav-icon');
-favIcons.forEach(function(favIcon) {
-  favIcon.addEventListener('click', function() {
-    if (favIcon.classList.contains('material-symbols-outlined')) {
-      favIcon.classList.remove('material-symbols-outlined');
-      favIcon.classList.add('material-icons');
-      favIcon.classList.remove('outlined');
-      favIcon.classList.add('filled');
-    } else {
-      favIcon.classList.remove('material-icons');
-      favIcon.classList.add('material-symbols-outlined');
-      favIcon.classList.remove('filled');
-      favIcon.classList.add('outlined');
-    }
+// add prod to card 
+document.addEventListener('DOMContentLoaded', function() {
+  const addIcons = document.querySelectorAll('.add-icon');
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  addIcons.forEach((addIcon, index) => {
+    addIcon.addEventListener('click', function() {
+      const product = products[index];
+      
+            
+            if (!cart.some(item => item.id === product.id)) {
+              cart.push(product);
+              localStorage.setItem('cart', JSON.stringify(cart));
+  
+            } else {
+              alert("Você já adicionou esse produto!");
+            }
+
+        });
+    });
   });
-});
+//
+
+// add prod to favorites
+document.addEventListener('DOMContentLoaded', function() {
+  const favIcons = document.querySelectorAll('.fav-icon');
+  let favoritesList = JSON.parse(localStorage.getItem('favorites')) || [];
+
+  favIcons.forEach((favIcon, index) => {
+    
+      const product = products[index];
+
+            if (favoritesList.some(item => item.id === product.id)) {
+              favIcon.classList.remove('material-symbols-outlined');
+              favIcon.classList.add('material-icons');
+              favIcon.classList.remove('outlined');
+              favIcon.classList.add('filled');
+            } else {
+              favIcon.classList.remove('material-icons');
+              favIcon.classList.add('material-symbols-outlined');
+              favIcon.classList.remove('filled');
+              favIcon.classList.add('outlined');
+            }
+          favIcon.addEventListener('click', function() {
+
+            if (favIcon.classList.contains('material-symbols-outlined')){
+              favIcon.classList.remove('material-symbols-outlined');
+              favIcon.classList.add('material-icons');
+              favIcon.classList.remove('outlined');
+              favIcon.classList.add('filled');
+                   
+            if (!favoritesList.some(item => item.id === product.id)) {
+                favoritesList.push(product);
+                localStorage.setItem('favorites', JSON.stringify(favoritesList)); 
+            }
+
+            } else {
+              favoritesList = favoritesList.filter(item => item.id !== product.id); 
+              localStorage.setItem('favorites', JSON.stringify(favoritesList)); 
+              favIcon.classList.remove('material-icons');
+              favIcon.classList.add('material-symbols-outlined');
+              favIcon.classList.remove('filled');
+              favIcon.classList.add('outlined'); 
+            }                    
+        });
+    });
+  });
 //

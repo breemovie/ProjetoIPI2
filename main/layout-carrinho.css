@@ -35,9 +35,10 @@ body {
   background: #505356;
 }
 
-.produtos::-webkit-scrollbar { 
+.cartao-container::-webkit-scrollbar { 
   display: none;  
 }
+
 /* end scrollbar */
 
 /* header */
@@ -185,7 +186,7 @@ header {
 }
 .coluna-info div{
     display: block;
-    margin: 20px 20px 0
+    margin: 20px 20px 0;
 }
 label{
     margin-right: 20px;
@@ -202,8 +203,6 @@ label{
   font-family: Arial, sans-serif;
     background-color: rgb(28,21,66, 0.3);
     border-radius: 5px;
-    padding: 82px;
-    margin: 50px;
     width: 980px;
     color: white;
     opacity: 90%;
@@ -212,6 +211,7 @@ label{
     margin: 50px;
     font-size: 15px;
 }
+
 .coluna-produtos-finalizar {
     background-color: rgb(28,21,66, 0.3);
     border-radius: 5px;padding: 20px;
@@ -238,17 +238,56 @@ label{
 }
 
 
+.cartao-container {
+  width: 980px;
+  height: 140px;
+  max-height: 140px;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 420px;
+  row-gap: 10px;
+  justify-content: space-between;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.empty-card-span {
+  width: 200px;
+  height: fit-content; 
+  align-self: center;
+  padding: 0;
+  margin: 0 0 0 400px;
+  font-size: 18px;
+}
 
 .cartao {
-    max-width: 540px;
-    margin: 20px 0;
-    border-left: 1px solid white;
-    padding: 9px;
+    position: relative;
+    width: 420px;
+    height: 140px;
+    border-left: 1px solid white;   
+    display: flex;
+}
+
+.remove-prod-card {
+  width: 20px;
+  height: 140px;
+  padding: 0;
+  margin: 0;
+  align-content: center;
+}
+
+.remove-card-icon {
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .conteudo-cartao {
-    display: flex;
-    align-items: center;
+  width: 420px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 10px;
 }
 
 .imagem-cartao {
