@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWILIGHT GAMES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <script src="main/script-database.js" defer></script> 
+    <script src="main/script-tela-user.js" defer></script>    
+    <link rel="stylesheet" href="main/layout-tela-user.css">
+</head>
+
+
+<body>
+   
+  <header>
+    <nav class="header">
+          <a href="telainicial.html"><img class="logo" src="img/logocompleto.png"></a>
+          <div class="header-right">
+            <ul>
+              <li><a href="telainicial.html">Loja</a></li>
+              <li onClick="document.getElementById('contact').scrollIntoView();">Suporte</li>
+              <li><a href="carrinho.html">Meu Carrinho</a></li>
+            </ul>
+            <div class="cart-div">
+              <a href="carrinho.html"><i class="material-symbols-outlined cart-icon">shopping_cart</i></a>
+            </div>
+            <div class="logged-in dropdown-user">
+              <i class="material-icons user-icon">account_circle</i>
+              <div class="drop-content-user">
+              <a href="userscreen.html">Perfil</a>
+              <a href="" onclick="logout()">Sair</a>
+              </div>
+            </div>
+        </div>
+      </nav>
+</header>
+
+
+
+
+<div class="userscreen-container">
+
+
+    <div class="userscreen-card1">
+        <div class="favorites-container" >
+            <div class="favorites-container-header">Favoritos</div>
+            <div class="favorites-cards-container" id="favoritesContainer">              
+                <!-- produtos via script -->
+            </div>
+        </div>       
+    </div>
+
+    <div class="userscreen-card2">
+        <div class="user-info-card">
+        <div class="user-icon-card-div"><span class="material-icons user-icon-screencard">account_circle</span></div>
+        <div class="user-name-card-div">Usuário</div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+
+    <nav class="footer">
+      <div class="div-footer" id="contact">  
+        <a href="" class="fa fa-facebook fot-icon"></a>
+        <a href="" class="fa fa-whatsapp fot-icon"></a>
+        <a href="" class="fa fa-twitter fot-icon"></a>
+        <a href="" class="fa fa-instagram fot-icon"></a>
+      </div>
+    </div>
+  
+  
+  </footer>
+
+
+</body>
+  
+</html>
