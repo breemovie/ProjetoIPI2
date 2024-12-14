@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <img src="${product.image}" class="img-poster-tag" alt="${product.name}">
                 <div class="div-gameprice-tag">
                 <div class="gamename-tag">${product.name}</div>
-                <div class="price-tag">${product.price}</div> 
+                <div class="price-tag">R$ ${product.price}</div> 
                 </div> 
               </a>                   
           `
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 // end scprit da div de produtos(search) da tela de produto
+
 
 // scroll com button (slide trailer) tela de produto
 const scrollContent = document.getElementById('slide-teasers');
@@ -114,48 +115,63 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 //
 
-// add prod to favorites
-document.addEventListener('DOMContentLoaded', function() {
+// add prod to favorites 
+document.addEventListener('DOMContentLoaded', function AddToFavorite() {
   const favIcons = document.querySelectorAll('.fav-icon');
-  let favoritesList = JSON.parse(localStorage.getItem('favorites')) || [];
-
-  favIcons.forEach((favIcon, index) => {
-    
+  const userId = localStorage.getItem('loggedInUserId');
+  let favoritesList = JSON.parse(localStorage.getItem(`favorites_${userId}`)) || [];
+  const userIsLogged = localStorage.getItem('userloggedIn') === 'true';
+ 
+  console.log("User logged in status: ", userIsLogged);
+  
+  favIcons.forEach((favIcon, index) => {   
       const product = products[index];
 
-            if (favoritesList.some(item => item.id === product.id)) {
-              favIcon.classList.remove('material-symbols-outlined');
-              favIcon.classList.add('material-icons');
-              favIcon.classList.remove('outlined');
-              favIcon.classList.add('filled');
-            } else {
+      if (userIsLogged) {
+                if (favoritesList.some(item => item.id === product.id)) {
+                  favIcon.classList.remove('material-symbols-outlined');
+                  favIcon.classList.add('material-icons');
+                  favIcon.classList.remove('outlined');
+                  favIcon.classList.add('filled');
+                } else {
+                  favIcon.classList.remove('material-icons');
+                  favIcon.classList.add('material-symbols-outlined');
+                  favIcon.classList.remove('filled');
+                  favIcon.classList.add('outlined');
+                }
+
+              favIcon.addEventListener('click', function() {     
+                  if (favIcon.classList.contains('material-symbols-outlined')){
+                    favIcon.classList.remove('material-symbols-outlined');
+                    favIcon.classList.add('material-icons');
+                    favIcon.classList.remove('outlined');
+                    favIcon.classList.add('filled');
+
+                  if (!favoritesList.some(item => item.id === product.id)) {
+                      favoritesList.push(product);
+                      localStorage.setItem('favorites', JSON.stringify(favoritesList)); 
+                  }
+
+                  } else {
+                    favoritesList = favoritesList.filter(item => item.id !== product.id); 
+                    localStorage.setItem('favorites', JSON.stringify(favoritesList)); 
+                    favIcon.classList.remove('material-icons');
+                    favIcon.classList.add('material-symbols-outlined');
+                    favIcon.classList.remove('filled');
+                    favIcon.classList.add('outlined'); 
+                  }       
+             }); 
+              
+            }
+            else {
+              favIcon.addEventListener('click', function() {
+                alert("Você precisa estar logado!");
+              });
               favIcon.classList.remove('material-icons');
               favIcon.classList.add('material-symbols-outlined');
               favIcon.classList.remove('filled');
               favIcon.classList.add('outlined');
             }
-          favIcon.addEventListener('click', function() {
-
-            if (favIcon.classList.contains('material-symbols-outlined')){
-              favIcon.classList.remove('material-symbols-outlined');
-              favIcon.classList.add('material-icons');
-              favIcon.classList.remove('outlined');
-              favIcon.classList.add('filled');
-                   
-            if (!favoritesList.some(item => item.id === product.id)) {
-                favoritesList.push(product);
-                localStorage.setItem('favorites', JSON.stringify(favoritesList)); 
-            }
-
-            } else {
-              favoritesList = favoritesList.filter(item => item.id !== product.id); 
-              localStorage.setItem('favorites', JSON.stringify(favoritesList)); 
-              favIcon.classList.remove('material-icons');
-              favIcon.classList.add('material-symbols-outlined');
-              favIcon.classList.remove('filled');
-              favIcon.classList.add('outlined'); 
-            }                    
-        });
     });
   });
 //

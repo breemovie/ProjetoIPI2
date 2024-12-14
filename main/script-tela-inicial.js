@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
          </div>
           <div class="card-price">
-            <p class="price">${product.price}</p>
+            <p class="price">R$ ${product.price}</p>
               <div class="card-add-fav">
                 <i class="material-symbols-outlined fav-icon outlined ">favorite</i>
                 <i class="material-icons add-icon">add_shopping_cart</i>
@@ -37,26 +37,27 @@ document.addEventListener('DOMContentLoaded', function() {
         gameClass[i].style.display = 'block';  
       }
     };
-    
+
     const gamePriceBefore = document.getElementsByClassName('price-before');
-          for (let i = 0; i < gamePriceBefore.length; i++) {
-            const textValue = gamePriceBefore[i].textContent || gamePriceBefore[i].innerText;
-            if (!textValue.trim()) {
-              gamePriceBefore[i].style.display = 'hidden'; 
-            } else {
-              gamePriceBefore[i].style.display = 'block'; 
-            }
-          };
+    for (let i = 0; i < gamePriceBefore.length; i++) {
+      const textValue = gamePriceBefore[i].textContent || gamePriceBefore[i].innerText;
+      if (!textValue.trim()) {
+        gamePriceBefore[i].style.display = 'hidden'; 
+      } else {
+        gamePriceBefore[i].style.display = 'block'; 
+      }
+    };
 //
 // add prod to card 
-      const addIcons = document.querySelectorAll('.add-icon');
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];       
+      const addIcons = document.querySelectorAll('.add-icon');  
+      const userId = localStorage.getItem('loggedInUserId'); 
+      let userCart = JSON.parse(localStorage.getItem(`cart_${userId}`)) || [];    
           addIcons.forEach((addIcon, index) => {
             addIcon.addEventListener('click', function() {
               const product = products[index];                     
-                    if (!cart.some(item => item.id === product.id)) {
-                      cart.push(product);
-                      localStorage.setItem('cart', JSON.stringify(cart));
+                    if (!userCart.some(item => item.id === product.id)) {
+                      userCart.push(product);
+                      localStorage.setItem(`cart_${userId}`, JSON.stringify(userCart));
           
                     } else {
                       alert("Você já adicionou esse produto!");
@@ -70,8 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
 // add prod to favorites 
 document.addEventListener('DOMContentLoaded', function AddToFavorite() {
   const favIcons = document.querySelectorAll('.fav-icon');
-  let favoritesList = JSON.parse(localStorage.getItem('favorites')) || [];
   const userIsLogged = localStorage.getItem('userloggedIn') === 'true';
+  const userId = localStorage.getItem('loggedInUserId'); 
+  let userFavorites = JSON.parse(localStorage.getItem(`favorites_${userId}`)) || [];
  
   console.log("User logged in status: ", userIsLogged);
   
@@ -79,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function AddToFavorite() {
       const product = products[index];
 
       if (userIsLogged) {
-                if (favoritesList.some(item => item.id === product.id)) {
+                if (userFavorites.some(item => item.id === product.id)) {
                   favIcon.classList.remove('material-symbols-outlined');
                   favIcon.classList.add('material-icons');
                   favIcon.classList.remove('outlined');
@@ -98,14 +100,14 @@ document.addEventListener('DOMContentLoaded', function AddToFavorite() {
                     favIcon.classList.remove('outlined');
                     favIcon.classList.add('filled');
 
-                  if (!favoritesList.some(item => item.id === product.id)) {
-                      favoritesList.push(product);
-                      localStorage.setItem('favorites', JSON.stringify(favoritesList)); 
+                  if (!userFavorites.some(item => item.id === product.id)) {
+                      userFavorites.push(product);
+                      localStorage.setItem(`favorites_${userId}`, JSON.stringify(userFavorites));
                   }
 
                   } else {
-                    favoritesList = favoritesList.filter(item => item.id !== product.id); 
-                    localStorage.setItem('favorites', JSON.stringify(favoritesList)); 
+                    userFavorites = userFavorites.filter(item => item.id !== product.id); 
+                    localStorage.setItem(`favorites_${userId}`, JSON.stringify(userFavorites));
                     favIcon.classList.remove('material-icons');
                     favIcon.classList.add('material-symbols-outlined');
                     favIcon.classList.remove('filled');
