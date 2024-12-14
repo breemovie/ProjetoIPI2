@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <script src="main/script-database.js" defer></script> 
-    <script src="main/script-tela-carrinho.js" defer></script> 
+    <script src="main/script-tela-carrinho-finalizar.js" defer></script> 
     <link rel="stylesheet" href="main/layout-carrinho.css">
     <title>Carrinho</title>
 </head>
@@ -40,7 +40,7 @@
           </nav>
     </header>
 
-    <div class="container">
+<div class="container">
        
         <div class="coluna-info">
             <div>
@@ -106,36 +106,28 @@
         </div>
 
         
-        <div class="coluna-produtos-finalizar">
-            <div class="cartao">
-                <div class="conteudo-cartao">
-                    <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg?t=1720558643" class="imagem-cartao" alt="...">
-                    <div class="corpo-cartao">
-                        <h5 class="titulo-cartao">Red Dead Redemption</h5>
-                        <p class="descricao-cartao">Ano 2024 - edição beta.</p>
-                        <p class="preco-anterior">R$ 99,90</p>
-                        <p class="preco-atual">R$ 79,90</p>                   
+        <div class="coluna-produtos-finalizar">           
+                <div class="box-coluna-produtos-finalizar">
+                    <div class="cartao-fin-container" id="carrinho-produtos-container-fnalizar"> <!-- produtos via script  --> </div>
+
+                    <div class="cart-info-grid">
+                        <div>
+                            <p>Valor total</p>
+                            <div class="valorTotal"></div>
+                        </div>
+                        <div>
+                            <p>Desconto Loja</p>
+                            <div class="descontoLoja"></div>
+                        </div>
+                        <div>
+                            <p>Desconto Cupom</p>
+                            <div class="valorCupom"></div>
+                        </div>     
                     </div>
                 </div>
-            </div>
-
-            <div>
-                <div class="flex">
-                    <p>Valor total</p><span>R$ 2,00</span>
-                </div>
-                <div class="flex">
-                    <p>Taxas</p><span>R$ 2,00</span>
-                </div>
-                <div class="flex">
-                    <p>Desconto Loja</p><span>R$ 2,00</span>
-                </div>
-                <div class="flex">
-                    <p>Desconto Cupom</p><span>R$ 2,00</span>
-                </div>
-
-            </div>
         </div>
-    </div>
+    
+</div>
 
     <footer>
         <nav class="footer">

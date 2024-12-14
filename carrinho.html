@@ -43,38 +43,36 @@
     </header>
 
     <div class="coluna-produtos">
+        <div class="cartao-container" id="carrinho-produtos-container"> </div>
 
-        <div class="cartao-container" id="carrinho-produtos-container">
+        <div class="cart-info-grid">
+              <div>
+                  <p>Valor total</p>
+                  <div class="valorTotal"></div>
+              </div>
+              <div>
+                  <p>Desconto Loja</p>
+                  <div class="descontoLoja"></div>
+              </div>
+            
+              <div class="cupom-grid-div">
+                <div>
+                    <p>Desconto Cupom</p>
+                    <div class="valorCupom"></div>
+                </div>              
+                <form class="cupom" id="cupomForm">
+                    <input type="text" placeholder="Cupom de desconto" id="addCupom">
+                    <button type="submit" class="addCupom-Button">Adicionar</button>
+                </form>
+              </div>
 
-          
-
-        </div>
-
-        <div>
-            <div class="flex">
-                <p>Valor total</p><span>R$ 0,00</span>
-            </div>
-            <div class="flex">
-                <p>Taxas</p><span>R$ 0,00</span>
-            </div>
-            <div class="flex">
-                <p>Desconto Loja</p><span>R$ 0,00</span>
-            </div>
-            <div class="flex">
-                <p>Desconto Cupom</p><span>R$ 0,00</span>
-            </div>
-
-            <div class="cupom">
-                <input type="text" placeholder="Cupom de desconto">
-                <button>Adicionar</button>
-            </div>
-
-            <button class="finalizar">
-                <a href="carrinho-finalizar.html">Finalizar compra</a>
-            </button>
+              <a href="carrinho-finalizar.html"><button class="finalizar">Finalizar compra</button></a>
+                   
+              
         </div>
     </div>
-    </div>
+
+   
 
 
     <footer>

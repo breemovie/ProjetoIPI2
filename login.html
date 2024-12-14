@@ -29,18 +29,18 @@
         </div>
 </header>
 
-
     <div class="login-box">
         <img src="img/FlyLogo.png" class="logo-box" alt="Logo">
-        <form class="login-form" action="telainicial.html">
+        <div class="login-form">
             <h1>Login</h1>   
-            <form>  
+            <form id="loginForm">  
                 <div class="inputs-log">         
-                    <input type="email" id="email" name="email" placeholder="E-mail" class="input-layout" required>
-                    <input type="password" id="senha" name="senha" placeholder="Senha" class="input-layout" required>
+                    <input type="email" id="emailId" name="email" placeholder="E-mail" class="input-layout" required>
+                    <input type="password" id="senhaId" name="senha"  placeholder="Senha" class="input-layout" required>
                 </div> 
-                <button class="entrar-but" type="submit" id="entrarB" onclick="login()">Entrar</button>
+                <button class="entrar-but" type="submit" id="entrarB">Entrar</button>
             </form> 
+
             <p class="p-esqueceu" onclick="openForm()">Esqueceu a senha?</p>
             <form  class="esqueceu-form" id="esq-senha">
                 <span class="material-symbols-outlined close-icon" onclick="closeForm()">close</span>
@@ -49,10 +49,9 @@
                 <div class="esq-send-div">
                     <input type="email" placeholder="E-mail" class="esq-input">
                     <button type="submit" class="sendemail-but"><span class="material-symbols-outlined send-icon">send</span></button>
-                </div>
-                
+                </div>               
             </form>
-        </form>  
+        </div>  
     </div>
 
 <footer>
